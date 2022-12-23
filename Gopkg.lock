@@ -3,4 +3,6 @@
 
 [[projects]]
   branch = "master"
-  name = "github.c
+  name = "github.com/barryz/cron"
+  packages = ["."]
+  revision = "bebc2953afa6
