@@ -8,4 +8,6 @@
   revision = "bebc2953afa66b36d2872f26cd77d185c6e15e44"
 
 [[projects]]
-  branch = "maste
+  branch = "master"
+  name = "github.com/braintree/manners"
+  packages = [".
