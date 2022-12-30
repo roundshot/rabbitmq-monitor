@@ -20,4 +20,5 @@
   revision = "33e0aa1cb7c019ccc3fbe049a8262a6403d30504"
 
 [[projects]]
-  
+  name = "github.com/go-martini/martini"
+  packages = ["."
