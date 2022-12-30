@@ -14,4 +14,6 @@
   revision = "82a8879fc5fd0381fa8b2d8033b19bf255252088"
 
 [[projects]]
-  
+  branch = "master"
+  name = "github.com/codegangsta/inject"
+  packages = [".
