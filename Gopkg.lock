@@ -26,4 +26,6 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/mart
+  name = "github.com/martini-contrib/auth"
+  packages = ["."]
+  revision = "fa62c19b7ae87da370242054c8b
