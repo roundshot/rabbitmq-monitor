@@ -28,4 +28,8 @@
   branch = "master"
   name = "github.com/martini-contrib/auth"
   packages = ["."]
-  revision = "fa62c19b7ae87da370242054c8b
+  revision = "fa62c19b7ae87da370242054c8beb11af31d327f"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/
