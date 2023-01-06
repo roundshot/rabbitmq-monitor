@@ -44,4 +44,5 @@
 
 [[projects]]
   name = "github.com/streadway/amqp"
-  pa
+  packages = ["."]
+  revision = "63795daa9a446c920826655f26ba31c81c86
