@@ -45,4 +45,8 @@
 [[projects]]
   name = "github.com/streadway/amqp"
   packages = ["."]
-  revision = "63795daa9a446c920826655f26ba31c81c86
+  revision = "63795daa9a446c920826655f26ba31c81c860fd6"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/toolkits/f
