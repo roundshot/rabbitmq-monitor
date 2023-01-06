@@ -51,4 +51,8 @@
   branch = "master"
   name = "github.com/toolkits/file"
   packages = ["."]
-  revision = "a5b3c5147e07f934d9f9d00b901a20b
+  revision = "a5b3c5147e07f934d9f9d00b901a20b2529f1a57"
+
+[[projects]]
+  name = "gopkg.in/yaml.v2"
+  package
