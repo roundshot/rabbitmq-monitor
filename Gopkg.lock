@@ -34,4 +34,7 @@
   branch = "master"
   name = "github.com/martini-contrib/render"
   packages = ["."]
-  revision = "ec
+  revision = "ec18f8345a1181146728238980606fb1d6f40e8c"
+
+[[projects]]
+  branch = "m
