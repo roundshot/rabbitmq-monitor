@@ -49,4 +49,6 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/toolkits/f
+  name = "github.com/toolkits/file"
+  packages = ["."]
+  revision = "a5b3c5147e07f934d9f9d00b901a20b
