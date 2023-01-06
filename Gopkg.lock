@@ -37,4 +37,6 @@
   revision = "ec18f8345a1181146728238980606fb1d6f40e8c"
 
 [[projects]]
-  branch = "m
+  branch = "master"
+  name = "github.com/oxtoacart/bpool"
+  packages 
