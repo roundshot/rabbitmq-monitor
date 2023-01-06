@@ -32,4 +32,6 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/
+  name = "github.com/martini-contrib/render"
+  packages = ["."]
+  revision = "ec
