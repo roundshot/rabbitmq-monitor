@@ -55,4 +55,5 @@
 
 [[projects]]
   name = "gopkg.in/yaml.v2"
-  package
+  packages = ["."]
+  revision = "5420a8b6744d3b0345ab293f6fcba19c97
