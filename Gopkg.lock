@@ -61,4 +61,5 @@
 
 [solve-meta]
   analyzer-name = "dep"
-  analyzer-ver
+  analyzer-version = 1
+  inputs-digest = "93e9c16c79ccadb5bd326616fca71a68
