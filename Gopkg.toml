@@ -40,3 +40,12 @@
 
 [[constraint]]
   branch = "master"
+  name = "github.com/martini-contrib/render"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/toolkits/file"
+
+[prune]
+  go-tests = true
+  unused-packages = true
