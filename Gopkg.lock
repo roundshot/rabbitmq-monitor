@@ -64,4 +64,4 @@
   analyzer-version = 1
   inputs-digest = "93e9c16c79ccadb5bd326616fca71a68dd24eda22613b37c3d9cd328b20ad3eb"
   solver-name = "gps-cdcl"
-  so
+  solver-version = 1
