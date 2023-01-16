@@ -4,3 +4,6 @@ debug: false
 details: true
 # hostname specified
 hostname: ""
+# agent collect interval
+interval: 10
+# push batch-size metrics per-operation
