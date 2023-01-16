@@ -1,3 +1,6 @@
 # debug mode
 debug: false
 # getting metric details
+details: true
+# hostname specified
+hostname: ""
