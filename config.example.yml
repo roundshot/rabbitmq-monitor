@@ -7,3 +7,8 @@ hostname: ""
 # agent collect interval
 interval: 10
 # push batch-size metrics per-operation
+batchsize: 100
+# enable functions
+enabled:
+  collect: true
+  witch: 
