@@ -11,4 +11,7 @@ batchsize: 100
 # enable functions
 enabled:
   collect: true
-  witch: 
+  witch: true
+  log_rotate: true
+
+# http client settings (timeout in seco
