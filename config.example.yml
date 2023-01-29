@@ -14,4 +14,9 @@ enabled:
   witch: true
   log_rotate: true
 
-# http client settings (timeout in seco
+# http client settings (timeout in seconds)
+http:
+  conn_timeout: 10
+  response_timeout: 10
+
+# RabbitM
