@@ -19,4 +19,8 @@ http:
   conn_timeout: 10
   response_timeout: 10
 
-# RabbitM
+# RabbitMQ settings
+rabbitmq:
+  host: 127.0.0.1
+  port: 15672
+  user: admin
