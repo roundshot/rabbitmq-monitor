@@ -24,3 +24,8 @@ rabbitmq:
   host: 127.0.0.1
   port: 15672
   user: admin
+  password: admin
+
+# falcon settings
+falcon:
+  api: "http://127.0
