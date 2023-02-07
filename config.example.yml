@@ -28,4 +28,8 @@ rabbitmq:
 
 # falcon settings
 falcon:
-  api: "http://127.0
+  api: "http://127.0.0.1:1988/v1/push"
+
+# scheduler config
+scheduler:
+  log_rotate: 
