@@ -36,4 +36,8 @@ scheduler:
 
 # witch config
 witch:
-  listen:
+  listen: ":5671"
+  control: "buildin"
+  service: ""
+  command: "sleep 120"
+  pr
