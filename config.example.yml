@@ -40,4 +40,7 @@ witch:
   control: "buildin"
   service: ""
   command: "sleep 120"
-  pr
+  process: "beam"
+  pid_file: "var/run/witch.pid"
+  auth:
+    admin
