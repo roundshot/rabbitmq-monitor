@@ -43,4 +43,9 @@ witch:
   process: "beam"
   pid_file: "var/run/witch.pid"
   auth:
-    admin
+    admin: "ADMIN"
+
+# filter for queues
+ignore_queue:
+  - "test"
+  - 
