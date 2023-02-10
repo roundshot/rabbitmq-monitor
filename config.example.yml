@@ -48,4 +48,8 @@ witch:
 # filter for queues
 ignore_queue:
   - "test"
+  - "celery"
+
+# status which indicate queue's running state
+qrunning:
   - 
