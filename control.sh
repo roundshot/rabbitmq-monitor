@@ -11,4 +11,6 @@ conf=cfg.json
 pidfile=var/app.pid
 logfile=var/app.log
 
-function 
+function check_pid() {
+    if [ -f $pidfile ];then
+        pid=`cat
