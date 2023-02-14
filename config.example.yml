@@ -52,4 +52,5 @@ ignore_queue:
 
 # status which indicate queue's running state
 qrunning:
-  - 
+  - "idle"
+  - "running"
