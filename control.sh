@@ -7,4 +7,8 @@ mkdir -p var
 
 module=agent
 app=spiderQ
-conf=cfg
+conf=cfg.json
+pidfile=var/app.pid
+logfile=var/app.log
+
+function 
