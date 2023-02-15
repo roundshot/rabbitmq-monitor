@@ -15,4 +15,7 @@ function check_pid() {
     if [ -f $pidfile ];then
         pid=`cat $pidfile`
         if [ -n $pid ]; then
-            running=`ps -p $pi
+            running=`ps -p $pid|grep -v "PID TTY" |wc -l`
+            return $running
+        fi
+    fi
