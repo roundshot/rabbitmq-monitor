@@ -19,3 +19,8 @@ function check_pid() {
             return $running
         fi
     fi
+    return 0
+}
+
+function start() {
+    check_pid
