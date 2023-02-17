@@ -24,3 +24,6 @@ function check_pid() {
 
 function start() {
     check_pid
+    running=$?
+    if [ $running -gt 0 ];then
+        echo -n 
