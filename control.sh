@@ -26,4 +26,6 @@ function start() {
     check_pid
     running=$?
     if [ $running -gt 0 ];then
-        echo -n 
+        echo -n "$app now is running already, pid="
+        cat $pidfile
+        return 1
