@@ -29,3 +29,7 @@ function start() {
         echo -n "$app now is running already, pid="
         cat $pidfile
         return 1
+    fi
+
+    if ! [ -f $conf ];then
+        echo "Config file $conf does
