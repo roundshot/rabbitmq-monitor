@@ -32,4 +32,5 @@ function start() {
     fi
 
     if ! [ -f $conf ];then
-        echo "Config file $conf does
+        echo "Config file $conf doesn't exist, creating one."
+        cp cfg.example.json $c
