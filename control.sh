@@ -40,4 +40,7 @@ function start() {
     running=`ps -p $! | grep -v "PID TTY" | wc -l`
     if [ $running -gt 0 ];then
         echo $! > $pidfile
-        echo "$app started...
+        echo "$app started..., pid=$!"
+    else
+        echo "$app failed to start."
+        r
