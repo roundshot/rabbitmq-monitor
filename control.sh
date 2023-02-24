@@ -38,4 +38,6 @@ function start() {
     nohup ./$app -c $conf &> $logfile &
     sleep 1
     running=`ps -p $! | grep -v "PID TTY" | wc -l`
-    if [ $running 
+    if [ $running -gt 0 ];then
+        echo $! > $pidfile
+        echo "$app started...
