@@ -37,4 +37,5 @@ function start() {
     fi
     nohup ./$app -c $conf &> $logfile &
     sleep 1
-    run
+    running=`ps -p $! | grep -v "PID TTY" | wc -l`
+    if [ $running 
