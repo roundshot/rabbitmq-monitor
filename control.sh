@@ -43,4 +43,9 @@ function start() {
         echo "$app started..., pid=$!"
     else
         echo "$app failed to start."
-        r
+        return 1
+    fi
+}
+
+function stop() {
+    pid=`cat $p
