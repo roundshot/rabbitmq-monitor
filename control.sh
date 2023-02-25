@@ -48,4 +48,7 @@ function start() {
 }
 
 function stop() {
-    pid=`cat $p
+    pid=`cat $pidfile`
+    skill -9 $pid &>/dev/null
+    rm -f $pidfile
+    ech
