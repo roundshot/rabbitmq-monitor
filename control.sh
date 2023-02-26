@@ -51,4 +51,9 @@ function stop() {
     pid=`cat $pidfile`
     skill -9 $pid &>/dev/null
     rm -f $pidfile
-    ech
+    echo "$app stoped..."
+}
+
+function restart() {
+    stop
+    sl
