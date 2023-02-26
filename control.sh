@@ -56,4 +56,10 @@ function stop() {
 
 function restart() {
     stop
-    sl
+    sleep 1
+    start
+}
+
+function status() {
+    check_pid
+    ru
