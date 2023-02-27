@@ -62,4 +62,7 @@ function restart() {
 
 function status() {
     check_pid
-    ru
+    running=$?
+    if [ $running -gt 0 ];then
+        echo started
+    els
