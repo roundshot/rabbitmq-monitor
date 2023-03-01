@@ -65,4 +65,10 @@ function status() {
     running=$?
     if [ $running -gt 0 ];then
         echo started
-    els
+    else
+        echo stoped
+    fi
+}
+
+function tailf() {
+    tail -f
