@@ -83,4 +83,8 @@ if [ "$1" == "" ]; then
 elif [ "$1" == "stop" ];then
     stop
 elif [ "$1" == "start" ];then
-    st
+    start
+elif [ "$1" == "restart" ];then
+    restart
+elif [ "$1" == "status" ];then
+    status
