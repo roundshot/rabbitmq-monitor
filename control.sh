@@ -71,4 +71,8 @@ function status() {
 }
 
 function tailf() {
-    tail -f
+    tail -f $logfile
+}
+
+function help() {
+    echo "$0 build|pack|start|
