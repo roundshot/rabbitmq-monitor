@@ -1,3 +1,8 @@
 package cron
 
-impo
+import (
+	"fmt"
+	"testing"
+)
+
+func TestLogRotateStart(t *t
