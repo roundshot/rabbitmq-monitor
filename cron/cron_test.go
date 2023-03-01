@@ -5,4 +5,6 @@ import (
 	"testing"
 )
 
-func TestLogRotateStart(t *t
+func TestLogRotateStart(t *testing.T) {
+	fmt.Println("testing")
+	//g.ParseConfig("../cfg.json.examp
