@@ -80,3 +80,7 @@ function help() {
 
 if [ "$1" == "" ]; then
     help
+elif [ "$1" == "stop" ];then
+    stop
+elif [ "$1" == "start" ];then
+    st
