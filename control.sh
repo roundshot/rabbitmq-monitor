@@ -75,4 +75,8 @@ function tailf() {
 }
 
 function help() {
-    echo "$0 build|pack|start|
+    echo "$0 build|pack|start|stop|restart|status|tail"
+}
+
+if [ "$1" == "" ]; then
+    help
