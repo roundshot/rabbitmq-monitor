@@ -9,4 +9,9 @@ import (
 func TestGetStatsDB(t *testing.T) {
 	g.ParseConfig("../config.example.yml")
 
-	//ov, err := funcs.GetOve
+	//ov, err := funcs.GetOverview()
+	//if err != nil {
+	//	t.Fatalf("%s", err.Error())
+	//}
+	//
+	
