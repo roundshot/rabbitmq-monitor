@@ -14,4 +14,6 @@ func TestGetStatsDB(t *testing.T) {
 	//	t.Fatalf("%s", err.Error())
 	//}
 	//
-	
+	//updateCurrentStatsDB(ov.StatisticsDbNode)
+	//
+	//stats := GetCurre
