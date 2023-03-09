@@ -17,4 +17,5 @@ func TestGetStatsDB(t *testing.T) {
 	//updateCurrentStatsDB(ov.StatisticsDbNode)
 	//
 	//stats := GetCurrentStatsDB()
-	//fmt.Printf("%s --- %s \n", stats.CurrentLocate
+	//fmt.Printf("%s --- %s \n", stats.CurrentLocate, stats.PreviousLocate)
+}
