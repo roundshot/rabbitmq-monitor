@@ -156,3 +156,68 @@ func handleJudge() (data []*MetaData) {
 	if err != nil {
 		log.Println(err.Error())
 		return
+	}
+
+	updateCurrentStatsDB(ov.StatisticsDbNode)
+
+	// RabbitMQ Version Compatibility: (<= 3.6.x)
+	if ov.StatisticsDbNode == currentNode || len(ov.StatisticsDbNode) == 0 {
+		channelCost, err := funcs.GetChannelCost()
+		if err != nil {
+			log.Println(err.Error())
+			return
+		}
+
+		aliveness, err := funcs.GetAlive()
+		if err != nil {
+			log.Printf("get aliveness api failed due to %s", err.Error())
+			return
+		}
+
+		queues, err := funcs.GetQueues()
+		if err != nil {
+			log.Printf("get queue api failed due to %s", err.Error())
+			return
+		}
+
+		exchs, err := funcs.GetExchanges()
+		if err != nil {
+			log.Printf("get exchange api failed due to %s", err.Error())
+			return
+		}
+
+		data = append(data, NewMetric(overviewPrefix+"queuesTotal", ov.Queues, "")) // 队列总数
+		data = append(data, NewMetric(overviewPrefix+"channelsTotal", ov.Channels, ""))
+		data = append(data, NewMetric(overviewPrefix+"connectionsTotal", ov.Connections, ""))
+		data = append(data, NewMetric(overviewPrefix+"consumersTotal", ov.Consumers, ""))
+		data = append(data, NewMetric(overviewPrefix+"exchangesTotal", ov.Exchanges, ""))
+		data = append(data, NewMetric(overviewPrefix+"msgsTotal", ov.MsgsTotal, ""))
+		data = append(data, NewMetric(overviewPrefix+"msgsReadyTotal", ov.MsgsReadyTotal, ""))
+		data = append(data, NewMetric(overviewPrefix+"msgsUnackTotal", ov.MsgsUnackedTotal, ""))
+		data = append(data, NewMetric(overviewPrefix+"deliverTotal", ov.DeliverGet, ""))
+		data = append(data, NewMetric(overviewPrefix+"publishTotal", ov.Publish, ""))
+		data = append(data, NewMetric(overviewPrefix+"redeliverTotal", ov.Redeliver, ""))
+		data = append(data, NewMetric(overviewPrefix+"statsDbEvent", ov.StatsDbEvents, "")) //统计数据库事件数
+		data = append(data, NewMetric(overviewPrefix+"deliverRate", ov.DeliverGetRates.Rate, ""))
+		data = append(data, NewMetric(overviewPrefix+"publishRate", ov.PublishRates.Rate, ""))
+		data = append(data, NewMetric(overviewPrefix+"confirmRate", ov.ConfirmRates.Rate, ""))
+		data = append(data, NewMetric(overviewPrefix+"redeliverRate", ov.RedeliverRates.Rate, ""))
+		data = append(data, NewMetric(overviewPrefix+"ackRate", ov.AckRates.Rate, ""))
+		data = append(data, NewMetric(overviewPrefix+"getChannelCost", channelCost, "")) // 获取channel耗时
+		data = append(data, NewMetric(overviewPrefix+"dpRatio", calcPercentage(int64(ov.DeliverGetRates.Rate), int64(ov.PublishRates.Rate)), ""))
+		data = append(data, NewMetric(overviewPrefix+"isAlive", isAliveness(aliveness.Status), "")) // 读写判断
+		data = append(data, NewMetric(overviewPrefix+"isUp", 1, ""))
+
+		for _, q := range queues {
+			tags := fmt.Sprintf("name=%s,vhost=%s", q.Name, q.Vhost)
+			data = append(data, NewMetric(queuePrefix+"messages", q.Messages, tags))
+			data = append(data, NewMetric(queuePrefix+"messages_ready", q.MessagesReady, tags))
+			data = append(data, NewMetric(queuePrefix+"messages_unacked", q.MessagesUnacked, tags))
+			data = append(data, NewMetric(queuePrefix+"deliver_get", q.DeliverGet.Rate, tags))
+			data = append(data, NewMetric(queuePrefix+"publish", q.Publish.Rate, tags))
+			data = append(data, NewMetric(queuePrefix+"redeliver", q.Redeliver.Rate, tags))
+			data = append(data, NewMetric(queuePrefix+"ack", q.Ack.Rate, tags))
+			data = append(data, NewMetric(queuePrefix+"memory", q.Memory, tags))
+			data = append(data, NewMetric(queuePrefix+"consumers", q.Consumers, tags))
+			data = append(data, NewMetric(queuePrefix+"consumer_utilisation", consumerUtil(q.ConsumerUtil), tags))
+			data = append(data, NewMetric(queuePrefix+"status", qStats(q.Status), tags))
