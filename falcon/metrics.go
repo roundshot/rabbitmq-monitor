@@ -221,3 +221,43 @@ func handleJudge() (data []*MetaData) {
 			data = append(data, NewMetric(queuePrefix+"consumers", q.Consumers, tags))
 			data = append(data, NewMetric(queuePrefix+"consumer_utilisation", consumerUtil(q.ConsumerUtil), tags))
 			data = append(data, NewMetric(queuePrefix+"status", qStats(q.Status), tags))
+			data = append(data, NewMetric(queuePrefix+"dpratio", calcPercentage(int64(q.DeliverGet.Rate), int64(q.Publish.Rate)), tags))
+		}
+
+		for _, e := range exchs {
+			tags := fmt.Sprintf("name=%s,vhost=%s", e.Name, e.VHost)
+			data = append(data, NewMetric(exchangePrefix+"publish_in", e.MsgStats.PublishInRate.Rate, tags))
+			data = append(data, NewMetric(exchangePrefix+"publish_out", e.MsgStats.PublishOutRate.Rate, tags))
+			data = append(data, NewMetric(exchangePrefix+"confirm", e.MsgStats.ConfirmRate.Rate, tags))
+		}
+	}
+
+	return
+}
+
+func handleSickRabbit() (data []*MetaData) {
+	data = make([]*MetaData, 0)
+	data = append(data, NewMetric(overviewPrefix+"isUp", 0, ""))
+	return
+}
+
+// Collector collect metrics
+func Collector() {
+	var m []*MetaData
+
+	if !funcs.CheckAlive() {
+		log.Println("[ERROR]: Can not connect to rabbit.")
+		m = handleSickRabbit()
+	} else {
+		m = handleJudge()
+	}
+
+	log.Printf("[INFO]: send to %s, size: %d.", g.Config().Falcon.API, len(m))
+	// log for debug
+	if g.Config().Debug {
+		for _, m := range m {
+			log.Println(m.String())
+		}
+	}
+	sendDatas(m)
+}
