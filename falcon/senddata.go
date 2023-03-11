@@ -12,4 +12,10 @@ import (
 
 func sendData(data []*MetaData) (resp []byte, err error) {
 	debug := g.Config().Debug
-	js, err := json.Mars
+	js, err := json.Marshal(data)
+	if err != nil {
+		return
+	}
+
+	if debug {
+		log.Print
