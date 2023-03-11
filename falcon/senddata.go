@@ -18,4 +18,7 @@ func sendData(data []*MetaData) (resp []byte, err error) {
 	}
 
 	if debug {
-		log.Print
+		log.Printf("agent api received %d metrics", len(data))
+	}
+
+	res, err := ht
