@@ -10,4 +10,6 @@ import (
 	"github.com/barryz/rmqmonitor/g"
 )
 
-func sendData(data []*MetaData) (resp []byte, er
+func sendData(data []*MetaData) (resp []byte, err error) {
+	debug := g.Config().Debug
+	js, err := json.Mars
