@@ -21,4 +21,4 @@ func sendData(data []*MetaData) (resp []byte, err error) {
 		log.Printf("agent api received %d metrics", len(data))
 	}
 
-	res, err := ht
+	res, err := http.Post(g.Config().Falcon.API, "Content-Type: appl
