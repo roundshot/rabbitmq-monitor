@@ -23,4 +23,8 @@ func sendData(data []*MetaData) (resp []byte, err error) {
 
 	res, err := http.Post(g.Config().Falcon.API, "Content-Type: application/json", bytes.NewBuffer(js))
 	if err != nil {
-		err = fmt.Errorf("[ERROR]: sent data to falcon agent api fail du
+		err = fmt.Errorf("[ERROR]: sent data to falcon agent api fail due to %s", err.Error())
+		return
+	}
+
+	defer res.Body.Close()
