@@ -33,4 +33,7 @@ func sendData(data []*MetaData) (resp []byte, err error) {
 }
 
 func sendDatas(m []*MetaData) {
-	// batch-size specified
+	// batch-size specified.
+	limit, lens := g.Config().Batchsize, len(m)
+	if lens >= limit {
+		off
