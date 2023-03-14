@@ -38,4 +38,5 @@ func sendDatas(m []*MetaData) {
 	if lens >= limit {
 		offset := lens % limit
 		for i := 0; i <= lens-1; i += limit {
-			if (i
+			if (i + limit - 1) >= lens {
+				_, err := sendData(m[i:(offset + i - 1)]
