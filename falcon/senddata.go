@@ -28,3 +28,9 @@ func sendData(data []*MetaData) (resp []byte, err error) {
 	}
 
 	defer res.Body.Close()
+
+	return
+}
+
+func sendDatas(m []*MetaData) {
+	// batch-size specified
