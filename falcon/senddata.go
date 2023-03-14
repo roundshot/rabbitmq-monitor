@@ -43,4 +43,7 @@ func sendDatas(m []*MetaData) {
 				if err != nil {
 					log.Println(err.Error())
 					break
-				
+				}
+			} else {
+				_, err := sendData(m[i:(limit + i - 1)])
+				if
