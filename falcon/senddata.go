@@ -52,4 +52,7 @@ func sendDatas(m []*MetaData) {
 				}
 			}
 		}
-	} e
+	} else {
+		_, err := sendData(m)
+		if err != nil {
+			log.Println(err.Error()
