@@ -7,4 +7,9 @@ import (
 	"github.com/barryz/rmqmonitor/g"
 )
 
-// Aliveness 
+// Aliveness ...
+type Aliveness struct {
+	Status string `json:"status"`
+}
+
+// G
