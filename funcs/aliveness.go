@@ -12,4 +12,5 @@ type Aliveness struct {
 	Status string `json:"status"`
 }
 
-// G
+// GetAlive ...
+func GetAlive() (aliveness *Aliveness, err error) 
