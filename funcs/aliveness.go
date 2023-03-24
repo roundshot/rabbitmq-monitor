@@ -13,4 +13,8 @@ type Aliveness struct {
 }
 
 // GetAlive ...
-func GetAlive() (aliveness *Aliveness, err error) 
+func GetAlive() (aliveness *Aliveness, err error) {
+	service := "aliveness-test/%2f"
+
+	res, err := g.RabbitAPI(service)
+	if err !=
