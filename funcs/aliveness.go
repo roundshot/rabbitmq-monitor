@@ -17,4 +17,5 @@ func GetAlive() (aliveness *Aliveness, err error) {
 	service := "aliveness-test/%2f"
 
 	res, err := g.RabbitAPI(service)
-	if err !=
+	if err != nil {
+		err = fmt.Errorf("[ERROR]: get rabbitmq aliveness fail due t
