@@ -22,4 +22,6 @@ func GetAlive() (aliveness *Aliveness, err error) {
 		return
 	}
 
-	err = json.Unmarshal(res
+	err = json.Unmarshal(res, &aliveness)
+	if err != nil {
+		err = fmt.Errorf("[ERROR]: unmar
