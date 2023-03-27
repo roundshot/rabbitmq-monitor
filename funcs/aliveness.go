@@ -18,4 +18,8 @@ func GetAlive() (aliveness *Aliveness, err error) {
 
 	res, err := g.RabbitAPI(service)
 	if err != nil {
-		err = fmt.Errorf("[ERROR]: get rabbitmq aliveness fail due t
+		err = fmt.Errorf("[ERROR]: get rabbitmq aliveness fail due to %s", err.Error())
+		return
+	}
+
+	err = json.Unmarshal(res
