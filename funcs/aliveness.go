@@ -24,4 +24,12 @@ func GetAlive() (aliveness *Aliveness, err error) {
 
 	err = json.Unmarshal(res, &aliveness)
 	if err != nil {
-		err = fmt.Errorf("[ERROR]: unmarshal rabbitmq aliveness json data fail due to %s", err.Error()
+		err = fmt.Errorf("[ERROR]: unmarshal rabbitmq aliveness json data fail due to %s", err.Error())
+		return
+	}
+
+	return
+}
+
+// CheckAlive ...
+func CheckAlive() (ok bo
