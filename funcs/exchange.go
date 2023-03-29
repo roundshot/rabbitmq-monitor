@@ -5,4 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/barryz/
+	"github.com/barryz/rmqmonitor/g"
+)
+
+// VHostName name of vHost
+type VHost
