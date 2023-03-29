@@ -34,4 +34,10 @@ func GetAlive() (aliveness *Aliveness, err error) {
 // CheckAlive ...
 func CheckAlive() (ok bool) {
 	service := "whoami"
-	if _, err := g.RabbitAPI(service); err 
+	if _, err := g.RabbitAPI(service); err == nil {
+		ok = true
+		return
+	}
+
+	return
+}
