@@ -9,4 +9,8 @@ import (
 )
 
 // VHostName name of vHost
-type VHost
+type VHostName struct {
+	Name string `json:"name"`
+}
+
+// Exchan
