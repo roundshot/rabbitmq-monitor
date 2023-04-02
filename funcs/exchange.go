@@ -13,4 +13,6 @@ type VHostName struct {
 	Name string `json:"name"`
 }
 
-// Exchan
+// ExchangeInfo information for exchange
+type ExchangeInfo struct {
+	Name  
