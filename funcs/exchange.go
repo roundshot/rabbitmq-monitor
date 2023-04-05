@@ -15,4 +15,6 @@ type VHostName struct {
 
 // ExchangeInfo information for exchange
 type ExchangeInfo struct {
-	Name  
+	Name     string `json:"name"`
+	VHost    string `json:"vhost"`
+	MsgStats struc
