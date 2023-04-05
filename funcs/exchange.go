@@ -17,4 +17,6 @@ type VHostName struct {
 type ExchangeInfo struct {
 	Name     string `json:"name"`
 	VHost    string `json:"vhost"`
-	MsgStats struc
+	MsgStats struct {
+		Confirm    int64 `json:"confirm"`
+		PublishIn  int64 `js
