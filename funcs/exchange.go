@@ -22,4 +22,6 @@ type ExchangeInfo struct {
 		PublishIn  int64 `json:"publish_in"`
 		PublishOut int64 `json:"publish_out"`
 
-		Confir
+		ConfirmRate struct {
+			Rate float64 `json:"rate"`
+		} `json:"confirm_details"`
