@@ -28,4 +28,7 @@ type ExchangeInfo struct {
 
 		PublishInRate struct {
 			Rate float64 `json:"rate"`
-		} `json:"publ
+		} `json:"publish_in_details"`
+
+		PublishOutRate struct {
+			Rate float64 `
