@@ -52,4 +52,10 @@ func getVHosts() (vl []string, err error) {
 	}
 
 	vl = make([]string, len(vs))
-	for _, v := range vs 
+	for _, v := range vs {
+		vl = append(vl, urlEncode(v.Name))
+	}
+	return
+}
+
+/
