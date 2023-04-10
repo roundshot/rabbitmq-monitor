@@ -40,4 +40,4 @@ func getVHosts() (vl []string, err error) {
 	service := "vhosts"
 	res, err := g.RabbitAPI(service)
 	if err != nil {
-		err
+		err = fmt.Errorf("[ERROR]: get rabbitmq vhost info fail due to %s", err.Error(
