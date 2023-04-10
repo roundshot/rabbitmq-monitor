@@ -45,4 +45,6 @@ func getVHosts() (vl []string, err error) {
 	}
 
 	var vs []*VHostName
-	err = json.Unmarshal(res,
+	err = json.Unmarshal(res, &vs)
+	if err != nil {
+		err = fmt.Errorf("[ERROR]: unmarshal rabbitm
