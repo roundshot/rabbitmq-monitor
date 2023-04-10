@@ -33,4 +33,8 @@ type ExchangeInfo struct {
 		PublishOutRate struct {
 			Rate float64 `json:"rate"`
 		} `json:"publish_out_details"`
-	} `json:"message_st
+	} `json:"message_stats"`
+}
+
+func getVHosts() (vl []string, err error) {
+	service :=
