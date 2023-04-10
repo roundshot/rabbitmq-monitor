@@ -49,3 +49,7 @@ func getVHosts() (vl []string, err error) {
 	if err != nil {
 		err = fmt.Errorf("[ERROR]: unmarshal rabbitmq vhost json data fail due to %s", err.Error())
 		return
+	}
+
+	vl = make([]string, len(vs))
+	for _, v := range vs 
