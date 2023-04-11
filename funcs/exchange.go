@@ -65,4 +65,7 @@ func GetExchanges() (exchs []*ExchangeInfo, err error) {
 		return
 	}
 
-	exchs = make([]*ExchangeInfo, 0
+	exchs = make([]*ExchangeInfo, 0)
+	for _, v := range vhosts {
+		var (
+			es   []*Exchan
