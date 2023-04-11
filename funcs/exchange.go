@@ -59,4 +59,5 @@ func getVHosts() (vl []string, err error) {
 }
 
 // GetExchanges get all exchanges
-func GetExchanges() (ex
+func GetExchanges() (exchs []*ExchangeInfo, err error) {
+	vhosts, err := getVHos
