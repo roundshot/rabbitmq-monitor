@@ -68,4 +68,8 @@ func GetExchanges() (exchs []*ExchangeInfo, err error) {
 	exchs = make([]*ExchangeInfo, 0)
 	for _, v := range vhosts {
 		var (
-			es   []*Exchan
+			es   []*ExchangeInfo
+			err1 error
+		)
+		service := fmt.Sprintf("exchanges/%s", v)
+		res, e
