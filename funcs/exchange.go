@@ -72,4 +72,7 @@ func GetExchanges() (exchs []*ExchangeInfo, err error) {
 			err1 error
 		)
 		service := fmt.Sprintf("exchanges/%s", v)
-		res, e
+		res, err1 := g.RabbitAPI(service)
+		if err1 != nil {
+			err = err1
+			re
