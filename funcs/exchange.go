@@ -75,4 +75,9 @@ func GetExchanges() (exchs []*ExchangeInfo, err error) {
 		res, err1 := g.RabbitAPI(service)
 		if err1 != nil {
 			err = err1
-			re
+			return
+		}
+
+		err1 = json.Unmarshal(res, &es)
+		if err1 != nil {
+			err =
