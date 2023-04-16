@@ -80,4 +80,9 @@ func GetExchanges() (exchs []*ExchangeInfo, err error) {
 
 		err1 = json.Unmarshal(res, &es)
 		if err1 != nil {
-			err =
+			err = err1
+			return
+		}
+
+		for _, e := range es {
+			if e.N
