@@ -92,4 +92,9 @@ func GetExchanges() (exchs []*ExchangeInfo, err error) {
 			if strings.Contains(e.Name, "amq.") {
 				continue
 			}
-			exchs =
+			exchs = append(exchs, e)
+		}
+	}
+
+	return
+}
