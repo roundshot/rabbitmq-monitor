@@ -85,4 +85,8 @@ func GetExchanges() (exchs []*ExchangeInfo, err error) {
 		}
 
 		for _, e := range es {
-			if e.N
+			if e.Name == "" {
+				e.Name = "DEFAULT_EXCHANGE"
+			}
+
+		
