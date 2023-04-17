@@ -89,4 +89,7 @@ func GetExchanges() (exchs []*ExchangeInfo, err error) {
 				e.Name = "DEFAULT_EXCHANGE"
 			}
 
-		
+			if strings.Contains(e.Name, "amq.") {
+				continue
+			}
+			exchs =
