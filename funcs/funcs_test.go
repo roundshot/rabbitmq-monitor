@@ -10,4 +10,7 @@ func TestGetExchanges(t *testing.T) {
 	g.ParseConfig("../config.example.yml")
 	//exchs, err := GetExchanges()
 	//if err != nil {
-	//
+	//	t.Error(err.Error())
+	//}
+	//for _, e := range exchs {
+	//	fmt.Printf("%s rat
