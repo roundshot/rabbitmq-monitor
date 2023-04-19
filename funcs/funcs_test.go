@@ -6,4 +6,5 @@ import (
 	"github.com/barryz/rmqmonitor/g"
 )
 
-func TestGe
+func TestGetExchanges(t *testing.T) {
+	g.ParseConfig("../config.examp
