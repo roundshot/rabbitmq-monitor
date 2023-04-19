@@ -1,4 +1,9 @@
 package funcs
 
 import (
-	"t
+	"testing"
+
+	"github.com/barryz/rmqmonitor/g"
+)
+
+func TestGe
