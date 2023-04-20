@@ -9,4 +9,6 @@ import (
 )
 
 // MemStats ...
-type MemStats struct 
+type MemStats struct {
+	Total              int64 `json:"total"`
+	ConnectionReaders  int
