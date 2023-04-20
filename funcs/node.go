@@ -5,4 +5,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.
+	"github.com/barryz/rmqmonitor/g"
+)
+
+// MemStats ...
+type MemStats struct 
