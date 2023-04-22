@@ -12,4 +12,5 @@ import (
 type MemStats struct {
 	Total              int64 `json:"total"`
 	ConnectionReaders  int64 `json:"connection_readers"`
-	ConnectionWriters  int64 `json:"con
+	ConnectionWriters  int64 `json:"connection_writers"`
+	ConnectionChannels int64 `json:"connection_channe
