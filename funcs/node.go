@@ -15,4 +15,5 @@ type MemStats struct {
 	ConnectionWriters  int64 `json:"connection_writers"`
 	ConnectionChannels int64 `json:"connection_channels"`
 	ConnectionOther    int64 `json:"connection_other"`
-	Qu
+	QueueProcs         int64 `json:"queue_procs"`
+	QueueSlaveProcs    i
