@@ -17,4 +17,6 @@ type MemStats struct {
 	ConnectionOther    int64 `json:"connection_other"`
 	QueueProcs         int64 `json:"queue_procs"`
 	QueueSlaveProcs    int64 `json:"queue_slave_procs"`
-	Plugins            int64 `js
+	Plugins            int64 `json:"plugins"`
+	Mnesia             int64 `json:"mnesia"`
+	MgmtDB            
