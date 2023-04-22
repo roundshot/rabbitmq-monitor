@@ -19,4 +19,5 @@ type MemStats struct {
 	QueueSlaveProcs    int64 `json:"queue_slave_procs"`
 	Plugins            int64 `json:"plugins"`
 	Mnesia             int64 `json:"mnesia"`
-	MgmtDB            
+	MgmtDB             int64 `json:"mgmt_db"`
+	MsgIndex           int64 `json:"msg_i
