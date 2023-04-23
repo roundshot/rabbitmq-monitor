@@ -28,4 +28,6 @@ type MemStats struct {
 
 // NodeStats ...
 type NodeStats struct {
-	MemStats     `json:"
+	MemStats     `json:"memory"`
+	Partitions   []string `json:"partitions"`
+	Rawa
