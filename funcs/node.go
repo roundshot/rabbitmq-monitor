@@ -22,4 +22,5 @@ type MemStats struct {
 	MgmtDB             int64 `json:"mgmt_db"`
 	MsgIndex           int64 `json:"msg_index"`
 	Code               int64 `json:"code"`
-	Atom          
+	Atom               int64 `json:"atom"`
+	Binary             int64 `json:"binary
