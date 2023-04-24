@@ -33,4 +33,6 @@ type NodeStats struct {
 	Rawait       float64  `json:"io_read_avg_time"`
 	Wawait       float64  `json:"io_write_avg_time"`
 	Syncawait    float64  `json:"io_sync_avg_time"`
-	MemUsed      int64    `j
+	MemUsed      int64    `json:"mem_used"`
+	MemLimit     int64    `json:"mem_limit"`
+	SocketsUse
