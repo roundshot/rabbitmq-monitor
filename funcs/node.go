@@ -31,4 +31,5 @@ type NodeStats struct {
 	MemStats     `json:"memory"`
 	Partitions   []string `json:"partitions"`
 	Rawait       float64  `json:"io_read_avg_time"`
-	Wa
+	Wawait       float64  `json:"io_write_avg_time"`
+	Syncawait    float64
