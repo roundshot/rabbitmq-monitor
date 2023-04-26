@@ -38,4 +38,5 @@ type NodeStats struct {
 	SocketsUsed  int64    `json:"sockets_used"`
 	SocketsTotal int64    `json:"sockets_total"`
 	FdUsed       int64    `json:"fd_used"`
-	FdTotal      int6
+	FdTotal      int64    `json:"fd_total"`
+	ErlProcUsed  int64    `json:"proc_used
