@@ -36,4 +36,6 @@ type NodeStats struct {
 	MemUsed      int64    `json:"mem_used"`
 	MemLimit     int64    `json:"mem_limit"`
 	SocketsUsed  int64    `json:"sockets_used"`
-	SocketsTotal int64    `json:"sock
+	SocketsTotal int64    `json:"sockets_total"`
+	FdUsed       int64    `json:"fd_used"`
+	FdTotal      int6
