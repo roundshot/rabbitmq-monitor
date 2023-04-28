@@ -41,4 +41,6 @@ type NodeStats struct {
 	FdTotal      int64    `json:"fd_total"`
 	ErlProcUsed  int64    `json:"proc_used"`
 	ErlProcTotal int64    `json:"proc_total"`
-	RunQueues    int64    `json:"
+	RunQueues    int64    `json:"run_queue"`
+	MemAlarm     bool     `json:"mem_alarm"`
+	DiskAlarm  
