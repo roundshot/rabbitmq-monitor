@@ -46,4 +46,6 @@ type NodeStats struct {
 	DiskAlarm    bool     `json:"disk_free_alarm"`
 }
 
-// MemAlarmStatus me
+// MemAlarmStatus memory alarm status
+func (n *NodeStats) MemAlarmStatus() int {
+	
