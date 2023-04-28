@@ -43,4 +43,7 @@ type NodeStats struct {
 	ErlProcTotal int64    `json:"proc_total"`
 	RunQueues    int64    `json:"run_queue"`
 	MemAlarm     bool     `json:"mem_alarm"`
-	DiskAlarm  
+	DiskAlarm    bool     `json:"disk_free_alarm"`
+}
+
+// MemAlarmStatus me
