@@ -48,4 +48,10 @@ type NodeStats struct {
 
 // MemAlarmStatus memory alarm status
 func (n *NodeStats) MemAlarmStatus() int {
-	
+	if n.MemAlarm {
+		return 0
+	}
+	return 1
+}
+
+// DiskAlarmStatus 
