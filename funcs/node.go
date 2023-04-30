@@ -66,4 +66,7 @@ func (n *NodeStats) DiskAlarmStatus() int {
 func GetNode() (n *NodeStats, err error) {
 	host := g.GetHost()
 	if g.Config().Debug {
-		log.P
+		log.Printf("[INFO]: Get hostname %s.", host)
+	}
+
+	servic
