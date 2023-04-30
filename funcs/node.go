@@ -56,4 +56,11 @@ func (n *NodeStats) MemAlarmStatus() int {
 
 // DiskAlarmStatus disc alarm status
 func (n *NodeStats) DiskAlarmStatus() int {
-	if n
+	if n.DiskAlarm {
+		return 0
+	}
+	return 1
+}
+
+// GetNode ...
+func GetNode
