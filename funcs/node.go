@@ -63,4 +63,7 @@ func (n *NodeStats) DiskAlarmStatus() int {
 }
 
 // GetNode ...
-func GetNode
+func GetNode() (n *NodeStats, err error) {
+	host := g.GetHost()
+	if g.Config().Debug {
+		log.P
