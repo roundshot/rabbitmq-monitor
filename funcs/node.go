@@ -69,4 +69,5 @@ func GetNode() (n *NodeStats, err error) {
 		log.Printf("[INFO]: Get hostname %s.", host)
 	}
 
-	servic
+	service := "nodes/rabbit@" + host + "?memory=true"
+	// service := "nodes/rabb
