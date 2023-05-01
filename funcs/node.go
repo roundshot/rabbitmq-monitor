@@ -73,4 +73,5 @@ func GetNode() (n *NodeStats, err error) {
 	// service := "nodes/rabbit@" + "vm-test-barryz" + "?memory=true"
 	res, err := g.RabbitAPI(service)
 	if err != nil {
-		err = fmt.Er
+		err = fmt.Errorf("[ERROR]: get rabbitmq node info fail due to %s", err.Error())
+		re
