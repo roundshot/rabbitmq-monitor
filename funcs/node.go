@@ -70,4 +70,5 @@ func GetNode() (n *NodeStats, err error) {
 	}
 
 	service := "nodes/rabbit@" + host + "?memory=true"
-	// service := "nodes/rabb
+	// service := "nodes/rabbit@" + "vm-test-barryz" + "?memory=true"
+	res
