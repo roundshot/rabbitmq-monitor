@@ -74,4 +74,9 @@ func GetNode() (n *NodeStats, err error) {
 	res, err := g.RabbitAPI(service)
 	if err != nil {
 		err = fmt.Errorf("[ERROR]: get rabbitmq node info fail due to %s", err.Error())
-		re
+		return
+	}
+
+	err = json.Unmarshal(res, &n)
+	if err != nil {
+		
