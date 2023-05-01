@@ -71,4 +71,6 @@ func GetNode() (n *NodeStats, err error) {
 
 	service := "nodes/rabbit@" + host + "?memory=true"
 	// service := "nodes/rabbit@" + "vm-test-barryz" + "?memory=true"
-	res
+	res, err := g.RabbitAPI(service)
+	if err != nil {
+		err = fmt.Er
