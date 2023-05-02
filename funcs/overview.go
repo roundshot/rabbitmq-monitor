@@ -83,3 +83,24 @@ func GetOverview() (result *OverView, err error) {
 
 // GetChannelCost time cost of getting channel
 func GetChannelCost() (getChannelCost float64, err error) {
+	uri := fmt.Sprintf("amqp://%s:%s@127.0.0.1:5672//", g.Config().Rabbit.User, g.Config().Rabbit.Password)
+
+	conn, err := amqp.Dial(uri)
+	if err != nil {
+		err = fmt.Errorf("[ERROR]: get amqp connection fail due to %s", err.Error())
+		return
+	}
+
+	timeToStart := time.Now()
+	ch, err := conn.Channel()
+	getChannelCost = time.Now().Sub(timeToStart).Seconds() * 1000
+	if err != nil {
+		err = fmt.Errorf("[ERROR]: get amqp channel fail due to %s", err.Error())
+		return
+	}
+
+	ch.Close()
+	conn.Close()
+
+	return
+}
