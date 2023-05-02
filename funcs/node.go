@@ -79,4 +79,8 @@ func GetNode() (n *NodeStats, err error) {
 
 	err = json.Unmarshal(res, &n)
 	if err != nil {
-		err = fmt.Errorf("[ERROR]: unmarshal rabbitmq node info json data fail due 
+		err = fmt.Errorf("[ERROR]: unmarshal rabbitmq node info json data fail due to %s", err.Error())
+		return
+	}
+	return
+}
