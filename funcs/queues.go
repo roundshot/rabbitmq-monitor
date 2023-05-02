@@ -2,4 +2,11 @@ package funcs
 
 import (
 	"encoding/json"
-	"fm
+	"fmt"
+	"strings"
+
+	"github.com/barryz/rmqmonitor/g"
+)
+
+// QueueRate ...
+typ
