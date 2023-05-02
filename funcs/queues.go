@@ -9,4 +9,8 @@ import (
 )
 
 // QueueRate ...
-typ
+type QueueRate struct {
+	Rate float64 `json:"rate"`
+}
+
+// QueueMsgStat
