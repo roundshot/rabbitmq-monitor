@@ -13,4 +13,6 @@ type QueueRate struct {
 	Rate float64 `json:"rate"`
 }
 
-// QueueMsgStat
+// QueueMsgStat ...
+type QueueMsgStat struct {
+	Publish    QueueRate `json:"publis
