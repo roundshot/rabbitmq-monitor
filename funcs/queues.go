@@ -17,4 +17,5 @@ type QueueRate struct {
 type QueueMsgStat struct {
 	Publish    QueueRate `json:"publish_details"`
 	DeliverGet QueueRate `json:"deliver_get_details"`
-	Ack  
+	Ack        QueueRate `json:"ack_details"`
+	Redeliver  Queue
