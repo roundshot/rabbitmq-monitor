@@ -18,4 +18,8 @@ type QueueMsgStat struct {
 	Publish    QueueRate `json:"publish_details"`
 	DeliverGet QueueRate `json:"deliver_get_details"`
 	Ack        QueueRate `json:"ack_details"`
-	Redeliver  Queue
+	Redeliver  QueueRate `json:"redeliver_details"`
+}
+
+// QueueMap ...
+type QueueMap struct {
