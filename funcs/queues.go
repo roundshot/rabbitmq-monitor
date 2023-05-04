@@ -24,4 +24,5 @@ type QueueMsgStat struct {
 // QueueMap ...
 type QueueMap struct {
 	Memory          int64       `json:"memory"`
-	Messages
+	Messages        int64       `json:"messages"`
+	MessagesReady   int64  
