@@ -30,4 +30,5 @@ type QueueMap struct {
 	ConsumerUtil    interface{} `json:"consumer_utilisation"`
 	Consumers       int64       `json:"consumers"`
 	Status          string      `json:"state"`
-	Name            stri
+	Name            string      `json:"name"`
+	Vhost           string      `json:
