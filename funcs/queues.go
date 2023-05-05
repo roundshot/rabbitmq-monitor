@@ -29,4 +29,5 @@ type QueueMap struct {
 	MessagesUnacked int64       `json:"messages_unacknowledged"`
 	ConsumerUtil    interface{} `json:"consumer_utilisation"`
 	Consumers       int64       `json:"consumers"`
-	Status  
+	Status          string      `json:"state"`
+	Name            stri
