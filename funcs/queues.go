@@ -36,4 +36,6 @@ type QueueMap struct {
 	QueueMsgStat    `json:"message_stats"`
 }
 
-func filterQu
+func filterQueue(q *QueueMap) bool {
+	isIgnore := false
+	ignores := g.Co
