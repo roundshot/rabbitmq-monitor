@@ -31,4 +31,5 @@ type QueueMap struct {
 	Consumers       int64       `json:"consumers"`
 	Status          string      `json:"state"`
 	Name            string      `json:"name"`
-	Vhost           string      `json:
+	Vhost           string      `json:"vhost"`
+	AutoDelete      bool        `json:"auto_de
