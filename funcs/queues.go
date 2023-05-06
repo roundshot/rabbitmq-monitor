@@ -32,4 +32,8 @@ type QueueMap struct {
 	Status          string      `json:"state"`
 	Name            string      `json:"name"`
 	Vhost           string      `json:"vhost"`
-	AutoDelete      bool        `json:"auto_de
+	AutoDelete      bool        `json:"auto_delete"`
+	QueueMsgStat    `json:"message_stats"`
+}
+
+func filterQu
