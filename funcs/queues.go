@@ -52,4 +52,8 @@ func filterQueue(q *QueueMap) bool {
 		return true
 	}
 
-	return 
+	return false
+}
+
+// GetQueues ...
+func GetQueues() (qm []*QueueMap, err error) {
