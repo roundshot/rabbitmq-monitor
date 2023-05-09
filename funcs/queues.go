@@ -43,4 +43,13 @@ func filterQueue(q *QueueMap) bool {
 	for _, i := range ignores {
 		if strings.Contains(strings.ToLower(q.Name), i) {
 			isIgnore = true
-		} else
+		} else {
+			continue
+		}
+	}
+
+	if isIgnore {
+		return true
+	}
+
+	return 
