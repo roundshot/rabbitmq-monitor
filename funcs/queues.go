@@ -70,4 +70,4 @@ func GetQueues() (qm []*QueueMap, err error) {
 
 	err = json.Unmarshal(res, &queues)
 	if err != nil {
-		err
+		err = fmt.Errorf("[ERROR]: unmarshal rabbitmq queue json
