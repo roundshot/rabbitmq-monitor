@@ -62,4 +62,6 @@ func GetQueues() (qm []*QueueMap, err error) {
 	)
 
 	service := "queues"
-	
+	res, err := g.RabbitAPI(service)
+	if err != nil {
+		err = fmt.Errorf("[ERROR]: 
