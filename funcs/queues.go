@@ -57,3 +57,9 @@ func filterQueue(q *QueueMap) bool {
 
 // GetQueues ...
 func GetQueues() (qm []*QueueMap, err error) {
+	var (
+		queues []*QueueMap
+	)
+
+	service := "queues"
+	
