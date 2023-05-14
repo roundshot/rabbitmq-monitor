@@ -9,4 +9,5 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-// En
+// EnableConfig configs which can be used
+type EnableConfig struc
