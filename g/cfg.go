@@ -10,4 +10,6 @@ import (
 )
 
 // EnableConfig configs which can be used
-type EnableConfig struc
+type EnableConfig struct {
+	Collect   bool `yaml:"collect"`
+	LogRotate bool `yaml:"log_r
