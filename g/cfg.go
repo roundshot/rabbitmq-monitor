@@ -12,4 +12,8 @@ import (
 // EnableConfig configs which can be used
 type EnableConfig struct {
 	Collect   bool `yaml:"collect"`
-	LogRotate bool `yaml:"log_r
+	LogRotate bool `yaml:"log_rotate"`
+	Witch     bool `yaml:"witch"`
+}
+
+// RabbitConfig ..
