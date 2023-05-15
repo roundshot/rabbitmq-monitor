@@ -25,4 +25,9 @@ type RabbitConfig struct {
 }
 
 // FalconConfig ...
-type FalconConfig struct
+type FalconConfig struct {
+	API string `yaml:"api"`
+}
+
+// HTTPConfig ...
+type HTTPConfig struct
