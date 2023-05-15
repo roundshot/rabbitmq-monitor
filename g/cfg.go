@@ -19,4 +19,6 @@ type EnableConfig struct {
 // RabbitConfig ...
 type RabbitConfig struct {
 	Host     string `yaml:"host"`
-	P
+	Port     int    `yaml:"port"`
+	User     string `yaml:"user"`
+	Pas
