@@ -21,4 +21,8 @@ type RabbitConfig struct {
 	Host     string `yaml:"host"`
 	Port     int    `yaml:"port"`
 	User     string `yaml:"user"`
-	Pas
+	Password string `yaml:"password"`
+}
+
+// FalconConfig ...
+type FalconConfig struct
