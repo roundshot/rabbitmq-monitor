@@ -16,4 +16,7 @@ type EnableConfig struct {
 	Witch     bool `yaml:"witch"`
 }
 
-// RabbitConfig ..
+// RabbitConfig ...
+type RabbitConfig struct {
+	Host     string `yaml:"host"`
+	P
