@@ -30,4 +30,6 @@ type FalconConfig struct {
 }
 
 // HTTPConfig ...
-type HTTPConfig struct
+type HTTPConfig struct {
+	ConnTimeout int `yaml:"conn_timeout"`
+	RespTimeout int `yaml:"response_time
