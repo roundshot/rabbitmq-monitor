@@ -37,4 +37,8 @@ type HTTPConfig struct {
 
 // SchedulerConfig ...
 type SchedulerConfig struct {
-	LogRo
+	LogRotate string `yaml:"log_rotate"`
+}
+
+// WitchConfig Program Config ...
+ty
