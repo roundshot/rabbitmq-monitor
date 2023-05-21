@@ -41,4 +41,6 @@ type SchedulerConfig struct {
 }
 
 // WitchConfig Program Config ...
-ty
+type WitchConfig struct {
+	ListenAddr string            `yaml:"listen"`
+	Con
