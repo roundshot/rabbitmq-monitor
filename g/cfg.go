@@ -45,4 +45,6 @@ type WitchConfig struct {
 	ListenAddr string            `yaml:"listen"`
 	Control    string            `yaml:"control"`
 	Service    string            `yaml:"service"`
-	Process    string            `yaml:"proc
+	Process    string            `yaml:"process"`
+	Command    string            `yaml:"command"`
+	PidFile    st
