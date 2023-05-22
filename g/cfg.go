@@ -44,4 +44,5 @@ type SchedulerConfig struct {
 type WitchConfig struct {
 	ListenAddr string            `yaml:"listen"`
 	Control    string            `yaml:"control"`
-	Service
+	Service    string            `yaml:"service"`
+	Process    string            `yaml:"proc
