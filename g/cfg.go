@@ -47,4 +47,5 @@ type WitchConfig struct {
 	Service    string            `yaml:"service"`
 	Process    string            `yaml:"process"`
 	Command    string            `yaml:"command"`
-	PidFile    st
+	PidFile    string            `yaml:"pid_file"`
+	Auth       map[str
