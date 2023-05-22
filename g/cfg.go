@@ -48,4 +48,8 @@ type WitchConfig struct {
 	Process    string            `yaml:"process"`
 	Command    string            `yaml:"command"`
 	PidFile    string            `yaml:"pid_file"`
-	Auth       map[str
+	Auth       map[string]string `yaml:"auth"`
+}
+
+// GlobalConfig ...
+type GlobalConfig struct
