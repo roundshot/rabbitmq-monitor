@@ -52,4 +52,6 @@ type WitchConfig struct {
 }
 
 // GlobalConfig ...
-type GlobalConfig struct
+type GlobalConfig struct {
+	Debug     bool             `yaml:"debug"`
+	Deta
