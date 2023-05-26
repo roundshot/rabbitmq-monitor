@@ -55,4 +55,5 @@ type WitchConfig struct {
 type GlobalConfig struct {
 	Debug     bool             `yaml:"debug"`
 	Details   bool             `yaml:"details"`
-	Hostname  string           `
+	Hostname  string           `yaml:"hostname"`
+	Batchsize int              `yaml:"batchs
