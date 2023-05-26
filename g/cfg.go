@@ -54,4 +54,5 @@ type WitchConfig struct {
 // GlobalConfig ...
 type GlobalConfig struct {
 	Debug     bool             `yaml:"debug"`
-	Deta
+	Details   bool             `yaml:"details"`
+	Hostname  string           `
