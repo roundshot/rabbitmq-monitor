@@ -56,4 +56,6 @@ type GlobalConfig struct {
 	Debug     bool             `yaml:"debug"`
 	Details   bool             `yaml:"details"`
 	Hostname  string           `yaml:"hostname"`
-	Batchsize int              `yaml:"batchs
+	Batchsize int              `yaml:"batchsize"`
+	Interval  int64            `yaml:"interval"`
+	Rabbit    *R
