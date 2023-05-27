@@ -58,4 +58,5 @@ type GlobalConfig struct {
 	Hostname  string           `yaml:"hostname"`
 	Batchsize int              `yaml:"batchsize"`
 	Interval  int64            `yaml:"interval"`
-	Rabbit    *R
+	Rabbit    *RabbitConfig    `yaml:"rabbitmq"`
+	Falcon    *FalconConfig    `
