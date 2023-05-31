@@ -63,4 +63,6 @@ type GlobalConfig struct {
 	HTTP      *HTTPConfig      `yaml:"http"`
 	Cron      *SchedulerConfig `yaml:"scheduler"`
 	Enabled   *EnableConfig    `yaml:"enabled"`
-	Ignores   []string         `yaml:"ignore_qu
+	Ignores   []string         `yaml:"ignore_queue"`
+	Qrunning  []string         `yaml:"qrunning"`
+	Witch
