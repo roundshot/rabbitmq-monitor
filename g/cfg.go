@@ -60,4 +60,6 @@ type GlobalConfig struct {
 	Interval  int64            `yaml:"interval"`
 	Rabbit    *RabbitConfig    `yaml:"rabbitmq"`
 	Falcon    *FalconConfig    `yaml:"falcon"`
-	HTTP      *HTTPConfig      `yaml:"http"
+	HTTP      *HTTPConfig      `yaml:"http"`
+	Cron      *SchedulerConfig `yaml:"scheduler"`
+	Enabled   *E
