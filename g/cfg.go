@@ -62,4 +62,5 @@ type GlobalConfig struct {
 	Falcon    *FalconConfig    `yaml:"falcon"`
 	HTTP      *HTTPConfig      `yaml:"http"`
 	Cron      *SchedulerConfig `yaml:"scheduler"`
-	Enabled   *E
+	Enabled   *EnableConfig    `yaml:"enabled"`
+	Ignores   []string         `yaml:"ignore_qu
