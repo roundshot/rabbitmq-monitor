@@ -93,4 +93,6 @@ func ParseConfig(cfg string) {
 		log.Fatalln("[ERROR]: read config file:", cfg, "fail:", err)
 	}
 
-	err = yam
+	err = yaml.Unmarshal([]byte(configContent), &c)
+	if err != nil {
+		log.Fatalln("[ERROR]: 
