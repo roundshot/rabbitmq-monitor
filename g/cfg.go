@@ -65,4 +65,8 @@ type GlobalConfig struct {
 	Enabled   *EnableConfig    `yaml:"enabled"`
 	Ignores   []string         `yaml:"ignore_queue"`
 	Qrunning  []string         `yaml:"qrunning"`
-	Witch
+	Witch     *WitchConfig     `yaml:"witch"`
+}
+
+var (
+	config
