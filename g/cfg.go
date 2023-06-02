@@ -88,4 +88,6 @@ func ParseConfig(cfg string) {
 
 	var c GlobalConfig
 
-	configContent, err := file.To
+	configContent, err := file.ToTrimString(cfg)
+	if err != nil {
+		log.Fatalln("[ERROR]
