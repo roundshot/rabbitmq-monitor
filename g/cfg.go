@@ -83,4 +83,9 @@ func Config() *GlobalConfig {
 // ParseConfig ...
 func ParseConfig(cfg string) {
 	if cfg == "" {
-		log.Println("use -c to specify configuration f
+		log.Println("use -c to specify configuration file")
+	}
+
+	var c GlobalConfig
+
+	configContent, err := file.To
