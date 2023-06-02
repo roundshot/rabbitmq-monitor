@@ -74,3 +74,6 @@ var (
 )
 
 // Config ...
+func Config() *GlobalConfig {
+	lock.RLock()
+	defer lock.RUnlock()
