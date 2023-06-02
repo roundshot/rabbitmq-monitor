@@ -69,4 +69,8 @@ type GlobalConfig struct {
 }
 
 var (
-	config
+	config *GlobalConfig
+	lock   = new(sync.RWMutex)
+)
+
+// Config ...
