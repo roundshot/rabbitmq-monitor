@@ -77,3 +77,8 @@ var (
 func Config() *GlobalConfig {
 	lock.RLock()
 	defer lock.RUnlock()
+	return config
+}
+
+// ParseConfig ...
+func ParseConfig(cfg string) {
