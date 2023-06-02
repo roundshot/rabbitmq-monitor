@@ -90,4 +90,7 @@ func ParseConfig(cfg string) {
 
 	configContent, err := file.ToTrimString(cfg)
 	if err != nil {
-		log.Fatalln("[ERROR]
+		log.Fatalln("[ERROR]: read config file:", cfg, "fail:", err)
+	}
+
+	err = yam
