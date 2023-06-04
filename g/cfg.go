@@ -103,3 +103,9 @@ func ParseConfig(cfg string) {
 		if err != nil {
 			log.Fatalln("[ERROR]: get local hostname fail")
 			os.Exit(1)
+		}
+	}
+
+	config = &c
+
+	log.Println("[INFO]: read config file:",
