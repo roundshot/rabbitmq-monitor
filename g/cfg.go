@@ -100,4 +100,6 @@ func ParseConfig(cfg string) {
 
 	if c.Hostname == "" {
 		c.Hostname, err = os.Hostname()
-		if err !
+		if err != nil {
+			log.Fatalln("[ERROR]: get local hostname fail")
+			os.Exit(1)
