@@ -14,4 +14,5 @@ func GetHost() string {
 	return Config().Hostname
 }
 
-// GetAPIUrl 
+// GetAPIUrl return the RabbitMQ api url
+func GetAPIUrl(service string) 
