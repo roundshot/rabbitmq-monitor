@@ -98,4 +98,6 @@ func ParseConfig(cfg string) {
 		log.Fatalln("[ERROR]: read config file:", cfg, "fail:", err)
 	}
 
-	if c.Hostname =
+	if c.Hostname == "" {
+		c.Hostname, err = os.Hostname()
+		if err !
