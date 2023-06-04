@@ -9,4 +9,9 @@ import (
 	"time"
 )
 
-// GetHost get hostname (sys
+// GetHost get hostname (syscall)
+func GetHost() string {
+	return Config().Hostname
+}
+
+// GetAPIUrl 
