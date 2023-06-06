@@ -22,4 +22,6 @@ func GetAPIUrl(service string) string {
 }
 
 // RabbitAPI ...
-func RabbitAPI(service string) (
+func RabbitAPI(service string) ([]byte, error) {
+	url := GetAPIUrl(service)
+	us
