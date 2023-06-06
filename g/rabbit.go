@@ -17,4 +17,9 @@ func GetHost() string {
 // GetAPIUrl return the RabbitMQ api url
 func GetAPIUrl(service string) string {
 	port := Config().Rabbit.Port
-	apiURL := fmt.Sprintf("http://%s:%s/api/%s", Config().Rabbit.Host, strconv.Itoa(port), serv
+	apiURL := fmt.Sprintf("http://%s:%s/api/%s", Config().Rabbit.Host, strconv.Itoa(port), service)
+	return apiURL
+}
+
+// RabbitAPI ...
+func RabbitAPI(service string) (
