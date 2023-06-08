@@ -33,4 +33,7 @@ func RabbitAPI(service string) ([]byte, error) {
 	client := &http.Client{
 		Transport: &http.Transport{
 			Dial: func(netw, addr string) (net.Conn, error) {
-				c, err := net.DialTimeout(netw, addr, time.Second*time.Duration(connTimeo
+				c, err := net.DialTimeout(netw, addr, time.Second*time.Duration(connTimeout))
+				if err != nil {
+					return nil, err
+				}
