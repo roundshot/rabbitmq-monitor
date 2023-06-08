@@ -32,4 +32,5 @@ func RabbitAPI(service string) ([]byte, error) {
 	// set connect/get/resp timeout
 	client := &http.Client{
 		Transport: &http.Transport{
-			Dial: func(netw
+			Dial: func(netw, addr string) (net.Conn, error) {
+				c, err := net.DialTime
