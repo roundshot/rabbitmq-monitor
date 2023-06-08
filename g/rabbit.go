@@ -37,3 +37,7 @@ func RabbitAPI(service string) ([]byte, error) {
 				if err != nil {
 					return nil, err
 				}
+				return c, nil
+
+			},
+			DisableKeepAlives:     true, // disa
