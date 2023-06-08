@@ -24,4 +24,5 @@ func GetAPIUrl(service string) string {
 // RabbitAPI ...
 func RabbitAPI(service string) ([]byte, error) {
 	url := GetAPIUrl(service)
-	us
+	user := Config().Rabbit.User
+	connTimeout := Config().HTTP.ConnTim
