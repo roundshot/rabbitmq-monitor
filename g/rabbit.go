@@ -27,4 +27,7 @@ func RabbitAPI(service string) ([]byte, error) {
 	user := Config().Rabbit.User
 	connTimeout := Config().HTTP.ConnTimeout
 	respTimeout := Config().HTTP.RespTimeout
-	passw
+	password := Config().Rabbit.Password
+
+	// set connect/get/resp timeout
+	client := &ht
