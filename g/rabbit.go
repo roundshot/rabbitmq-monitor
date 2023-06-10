@@ -40,4 +40,5 @@ func RabbitAPI(service string) ([]byte, error) {
 				return c, nil
 
 			},
-			DisableKeepAlives:     true, // disa
+			DisableKeepAlives:     true, // disable http keepalive
+			ResponseHeaderTimeout: time
