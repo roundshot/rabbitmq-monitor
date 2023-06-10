@@ -41,4 +41,7 @@ func RabbitAPI(service string) ([]byte, error) {
 
 			},
 			DisableKeepAlives:     true, // disable http keepalive
-			ResponseHeaderTimeout: time
+			ResponseHeaderTimeout: time.Second * time.Duration(respTimeout),
+		},
+	}
+	request, _ := http.NewRequest("GET"
