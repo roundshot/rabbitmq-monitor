@@ -44,4 +44,5 @@ func RabbitAPI(service string) ([]byte, error) {
 			ResponseHeaderTimeout: time.Second * time.Duration(respTimeout),
 		},
 	}
-	request, _ := http.NewRequest("GET"
+	request, _ := http.NewRequest("GET", url, nil)
+	request.Header.Set("Content-Type", 
