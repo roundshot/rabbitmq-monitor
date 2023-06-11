@@ -49,4 +49,7 @@ func RabbitAPI(service string) ([]byte, error) {
 	request.SetBasicAuth(user, password)
 	response, err := client.Do(request)
 	if err != nil {
-		return []byte("
+		return []byte(""), fmt.Errorf("call rabbit api fail")
+	}
+
+	defer respo
