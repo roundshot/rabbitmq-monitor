@@ -52,4 +52,6 @@ func RabbitAPI(service string) ([]byte, error) {
 		return []byte(""), fmt.Errorf("call rabbit api fail")
 	}
 
-	defer respo
+	defer response.Body.Close()
+
+	resultCode := response.StatusCode
