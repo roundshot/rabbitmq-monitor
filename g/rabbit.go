@@ -45,4 +45,6 @@ func RabbitAPI(service string) ([]byte, error) {
 		},
 	}
 	request, _ := http.NewRequest("GET", url, nil)
-	request.Header.Set("Content-Type", 
+	request.Header.Set("Content-Type", "application/json")
+	request.SetBasicAuth(user, password)
+	response, er
