@@ -55,3 +55,6 @@ func RabbitAPI(service string) ([]byte, error) {
 	defer response.Body.Close()
 
 	resultCode := response.StatusCode
+	switch resultCode {
+	case http.StatusOK:
+		body, _ := ioutil.ReadAll(re
