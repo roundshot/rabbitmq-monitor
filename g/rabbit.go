@@ -62,4 +62,6 @@ func RabbitAPI(service string) ([]byte, error) {
 	case http.StatusUnauthorized:
 		return []byte(""), fmt.Errorf("call rabbitmq rest api auth fail")
 	default:
-		return []byte(""), fmt.Errorf("unknown error %d", resultCod
+		return []byte(""), fmt.Errorf("unknown error %d", resultCode)
+	}
+}
