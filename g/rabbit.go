@@ -59,4 +59,5 @@ func RabbitAPI(service string) ([]byte, error) {
 	case http.StatusOK:
 		body, _ := ioutil.ReadAll(response.Body)
 		return body, nil
-	case http.StatusUnauthoriz
+	case http.StatusUnauthorized:
+		return []byte(""), fmt.Errorf("call rabbitmq rest api auth
