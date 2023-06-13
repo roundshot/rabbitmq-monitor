@@ -6,4 +6,5 @@ import (
 
 // StatsDB stats management database
 type StatsDB struct {
-	CurrentLocat
+	CurrentLocate   string `json:"current_locate"`
+	PreviousLocate  string `j
