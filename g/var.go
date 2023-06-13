@@ -13,4 +13,8 @@ type StatsDB struct {
 }
 
 // NewStatsDB create an new stats management database cache
-func NewStatsD
+func NewStatsDB() *StatsDB {
+	return &StatsDB{}
+}
+
+// SetCurrentLo
