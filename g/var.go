@@ -12,4 +12,5 @@ type StatsDB struct {
 	LastCollectTime string `json:"last_collect"`
 }
 
-// NewStatsDB
+// NewStatsDB create an new stats management database cache
+func NewStatsD
