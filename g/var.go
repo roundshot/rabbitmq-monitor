@@ -17,4 +17,5 @@ func NewStatsDB() *StatsDB {
 	return &StatsDB{}
 }
 
-// SetCurrentLo
+// SetCurrentLocate setting current database location
+func (s *StatsDB) Set
