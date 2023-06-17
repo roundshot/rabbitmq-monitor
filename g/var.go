@@ -18,4 +18,5 @@ func NewStatsDB() *StatsDB {
 }
 
 // SetCurrentLocate setting current database location
-func (s *StatsDB) Set
+func (s *StatsDB) SetCurrentLocate(locate string) {
+	if s.CurrentLocate != 
