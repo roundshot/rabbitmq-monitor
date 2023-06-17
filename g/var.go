@@ -21,4 +21,5 @@ func NewStatsDB() *StatsDB {
 func (s *StatsDB) SetCurrentLocate(locate string) {
 	if s.CurrentLocate != locate {
 		s.PreviousLocate = s.CurrentLocate
-		s.CurrentLoca
+		s.CurrentLocate = locate
+		s.LastChangeTime = utils.GetCurrentDateTi
