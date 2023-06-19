@@ -1,4 +1,6 @@
 package version
 
 var (
-	// Build agent Bu
+	// Build agent Build version
+	Build string
+)
