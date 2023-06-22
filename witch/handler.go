@@ -12,4 +12,9 @@ import (
 	"github.com/barryz/rmqmonitor/g"
 	"github.com/barryz/rmqmonitor/witch/system"
 
-	"github.com/martini-contrib/rend
+	"github.com/martini-contrib/render"
+)
+
+var (
+	// ErrServerError is internal server error.
+	ErrServerError = err
