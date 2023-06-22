@@ -23,3 +23,6 @@ var (
 )
 
 func sysAction(control *system.SysController, req *http.Request, r render.Render) {
+	bs, err := ioutil.ReadAll(req.Body)
+	if err != nil {
+		log.Printf("[ERR
