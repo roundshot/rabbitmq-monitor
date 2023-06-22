@@ -22,4 +22,4 @@ var (
 	ErrBadRequest = errors.New("Bad Request")
 )
 
-func sysAction(co
+func sysAction(control *system.SysController, req *http.Request, r render.Render) {
