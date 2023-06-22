@@ -17,4 +17,5 @@ import (
 
 var (
 	// ErrServerError is internal server error.
-	ErrServerError = err
+	ErrServerError = errors.New("Internal Server Error")
+	// ErrBadRequest is bad request er
