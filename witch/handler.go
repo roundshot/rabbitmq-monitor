@@ -29,4 +29,6 @@ func sysAction(control *system.SysController, req *http.Request, r render.Render
 		r.JSON(http.StatusInternalServerError, ErrServerError)
 		return
 	}
-	log.Printf("[INFO] Request action: 
+	log.Printf("[INFO] Request action: %s", bs)
+	action := &system.Action{}
+	if err := json.Unmarshal(bs
