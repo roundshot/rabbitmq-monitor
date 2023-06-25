@@ -31,4 +31,5 @@ func sysAction(control *system.SysController, req *http.Request, r render.Render
 	}
 	log.Printf("[INFO] Request action: %s", bs)
 	action := &system.Action{}
-	if err := json.Unmarshal(bs
+	if err := json.Unmarshal(bs, action); err != nil {
+		log.Printf("[WARN] Invalid action form
