@@ -33,4 +33,8 @@ func sysAction(control *system.SysController, req *http.Request, r render.Render
 	action := &system.Action{}
 	if err := json.Unmarshal(bs, action); err != nil {
 		log.Printf("[WARN] Invalid action format: %s", err)
-		r.JSON(http.StatusBadRequest, ErrBadReque
+		r.JSON(http.StatusBadRequest, ErrBadRequest)
+		return
+	}
+	r.JSON(http.StatusOK, control.Handle(action))
+}
