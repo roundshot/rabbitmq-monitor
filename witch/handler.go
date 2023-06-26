@@ -38,3 +38,5 @@ func sysAction(control *system.SysController, req *http.Request, r render.Render
 	}
 	r.JSON(http.StatusOK, control.Handle(action))
 }
+
+func statsAction(control *system.StatsController, req *http.Request, r re
