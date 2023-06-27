@@ -47,4 +47,6 @@ func statsAction(control *system.StatsController, req *http.Request, r render.Re
 		return
 	}
 	log.Printf("[INFO] Request stats action: %s", bs)
-	action := &s
+	action := &system.Action{}
+	if err := json.Unmarshal(bs, action); err != nil {
+		log
