@@ -43,4 +43,5 @@ func statsAction(control *system.StatsController, req *http.Request, r render.Re
 	bs, err := ioutil.ReadAll(req.Body)
 	if err != nil {
 		log.Printf("[ERROR] Read request body error: %s", err)
-	
+		r.JSON(http.StatusInternalServerError, ErrServerError)
+		retu
