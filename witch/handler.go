@@ -44,4 +44,7 @@ func statsAction(control *system.StatsController, req *http.Request, r render.Re
 	if err != nil {
 		log.Printf("[ERROR] Read request body error: %s", err)
 		r.JSON(http.StatusInternalServerError, ErrServerError)
-		retu
+		return
+	}
+	log.Printf("[INFO] Request stats action: %s", bs)
+	action := &s
