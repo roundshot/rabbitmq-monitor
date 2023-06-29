@@ -50,4 +50,7 @@ func statsAction(control *system.StatsController, req *http.Request, r render.Re
 	action := &system.Action{}
 	if err := json.Unmarshal(bs, action); err != nil {
 		log.Printf("[WARN] Invalid action format: %s", err)
-		r.JSON(http.S
+		r.JSON(http.StatusBadRequest, ErrBadRequest)
+		return
+	}
+	r.JSON(http.StatusOK, control.H
