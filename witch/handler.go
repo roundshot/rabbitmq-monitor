@@ -57,4 +57,6 @@ func statsAction(control *system.StatsController, req *http.Request, r render.Re
 
 }
 
-func procForceStop(req *http.Request, r rende
+func procForceStop(req *http.Request, r render.Render) {
+	if req.Method != "GET" {
+		r.JSON(http.StatusMeth
