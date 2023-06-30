@@ -53,4 +53,8 @@ func statsAction(control *system.StatsController, req *http.Request, r render.Re
 		r.JSON(http.StatusBadRequest, ErrBadRequest)
 		return
 	}
-	r.JSON(http.StatusOK, control.H
+	r.JSON(http.StatusOK, control.Handle(action))
+
+}
+
+func procForceStop(req *http.Request, r rende
