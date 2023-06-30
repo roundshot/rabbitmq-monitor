@@ -66,4 +66,8 @@ func procForceStop(req *http.Request, r render.Render) {
 	args := fmt.Sprintf("pgrep %s|xargs skill -9", proc)
 	_, err := system.ExecCommand("bash", []string{"-c", args})
 	if err != nil {
-		r.JSON(http.StatusServiceUnavailable, ErrSer
+		r.JSON(http.StatusServiceUnavailable, ErrServerError)
+		return
+	}
+
+	r.JSON(http.StatusOK, map[string]interface
