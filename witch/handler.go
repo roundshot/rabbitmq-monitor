@@ -70,4 +70,7 @@ func procForceStop(req *http.Request, r render.Render) {
 		return
 	}
 
-	r.JSON(http.StatusOK, map[string]interface
+	r.JSON(http.StatusOK, map[string]interface{}{"status": true, "data": "ok"})
+}
+
+func statsInfo
