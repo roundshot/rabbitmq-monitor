@@ -76,3 +76,7 @@ func procForceStop(req *http.Request, r render.Render) {
 func statsInfo(req *http.Request, r render.Render) {
 	if req.Method != "GET" {
 		r.JSON(http.StatusMethodNotAllowed, ErrBadRequest)
+		return
+	}
+	stats := falcon.GetCurrentStatsDB()
+	r.JSON(http.St
