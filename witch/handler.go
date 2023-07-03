@@ -73,4 +73,5 @@ func procForceStop(req *http.Request, r render.Render) {
 	r.JSON(http.StatusOK, map[string]interface{}{"status": true, "data": "ok"})
 }
 
-func statsInfo
+func statsInfo(req *http.Request, r render.Render) {
+	if req.Method != "GET" 
