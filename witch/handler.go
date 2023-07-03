@@ -79,4 +79,6 @@ func statsInfo(req *http.Request, r render.Render) {
 		return
 	}
 	stats := falcon.GetCurrentStatsDB()
-	r.JSON(http.St
+	r.JSON(http.StatusOK, map[string]interface{}{"status": true, "data": stats})
+
+}
