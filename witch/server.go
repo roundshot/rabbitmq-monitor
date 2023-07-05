@@ -17,4 +17,8 @@ import (
 // Server is the system RESTFul web server.
 type Server struct {
 	addr string
-	m    *martini.Class
+	m    *martini.ClassicMartini
+}
+
+// NewServer inits a system RESTful web server.
+func 
