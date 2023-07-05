@@ -14,4 +14,7 @@ import (
 	"github.com/martini-contrib/render"
 )
 
-// Server is the system R
+// Server is the system RESTFul web server.
+type Server struct {
+	addr string
+	m    *martini.Class
