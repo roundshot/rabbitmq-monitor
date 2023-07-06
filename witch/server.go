@@ -26,4 +26,5 @@ func NewServer(addr string, sysControl *system.SysController, statsControl *syst
 		addr: addr,
 		m:    martini.Classic(),
 	}
-	authFu
+	authFunc := mauth.BasicFunc(func(username, password string) bool {
+		pwd, 
