@@ -21,4 +21,5 @@ type Server struct {
 }
 
 // NewServer inits a system RESTful web server.
-func NewServer(addr string, sysControl *system.SysController, statsControl
+func NewServer(addr string, sysControl *system.SysController, statsControl *system.StatsController, cfg *g.GlobalConfig) *Server {
+	s
