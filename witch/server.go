@@ -27,4 +27,6 @@ func NewServer(addr string, sysControl *system.SysController, statsControl *syst
 		m:    martini.Classic(),
 	}
 	authFunc := mauth.BasicFunc(func(username, password string) bool {
-		pwd, 
+		pwd, ok := cfg.Witch.Auth[username]
+		return ok && pwd == password
+	}).(func
