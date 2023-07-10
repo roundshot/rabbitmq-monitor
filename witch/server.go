@@ -30,3 +30,6 @@ func NewServer(addr string, sysControl *system.SysController, statsControl *syst
 		pwd, ok := cfg.Witch.Auth[username]
 		return ok && pwd == password
 	}).(func(http.ResponseWriter, *http.Request, martini.Context))
+	ser.m.Map(sysControl)
+	ser.m.Map(statsControl)
+	ser.m.Use(auth
