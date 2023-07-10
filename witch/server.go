@@ -35,4 +35,5 @@ func NewServer(addr string, sysControl *system.SysController, statsControl *syst
 	ser.m.Use(authInclusive("/api", authFunc))
 	ser.m.Use(render.Renderer(render.Options{}))
 	// start|stop|restart RabbitMQ process(other process)  via supervisor or systemd
-	ser.m.Put("/api/app/actions", 
+	ser.m.Put("/api/app/actions", sysAction)
+	// forced to stop RabbitMQ process(other
