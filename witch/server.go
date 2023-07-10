@@ -33,4 +33,5 @@ func NewServer(addr string, sysControl *system.SysController, statsControl *syst
 	ser.m.Map(sysControl)
 	ser.m.Map(statsControl)
 	ser.m.Use(authInclusive("/api", authFunc))
-	ser.m.Use(render.Renderer(render
+	ser.m.Use(render.Renderer(render.Options{}))
+	// start|stop|restart RabbitMQ process(other pro
