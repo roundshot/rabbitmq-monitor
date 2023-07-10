@@ -29,4 +29,4 @@ func NewServer(addr string, sysControl *system.SysController, statsControl *syst
 	authFunc := mauth.BasicFunc(func(username, password string) bool {
 		pwd, ok := cfg.Witch.Auth[username]
 		return ok && pwd == password
-	}).(func
+	}).(func(http.ResponseWriter, *http.Request, martini.Context))
