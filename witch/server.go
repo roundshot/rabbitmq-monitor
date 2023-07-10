@@ -32,4 +32,5 @@ func NewServer(addr string, sysControl *system.SysController, statsControl *syst
 	}).(func(http.ResponseWriter, *http.Request, martini.Context))
 	ser.m.Map(sysControl)
 	ser.m.Map(statsControl)
-	ser.m.Use(auth
+	ser.m.Use(authInclusive("/api", authFunc))
+	ser.m.Use(render.Renderer(render
