@@ -37,4 +37,5 @@ func NewServer(addr string, sysControl *system.SysController, statsControl *syst
 	// start|stop|restart RabbitMQ process(other process)  via supervisor or systemd
 	ser.m.Put("/api/app/actions", sysAction)
 	// forced to stop RabbitMQ process(other process) via sent SIGTERM syscall signal
-	ser.m.Get("/a
+	ser.m.Get("/api/app/fstop", procForceStop)
+	// get current RabbitMQ statistic db nod
