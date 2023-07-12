@@ -40,4 +40,5 @@ func NewServer(addr string, sysControl *system.SysController, statsControl *syst
 	ser.m.Get("/api/app/fstop", procForceStop)
 	// get current RabbitMQ statistic db node location
 	ser.m.Get("/api/stats", statsInfo)
-	// reset|
+	// reset|crash|terminate current RabbitMQ statistic db node
+	ser.m.Put("/api/s
