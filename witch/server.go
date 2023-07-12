@@ -41,4 +41,8 @@ func NewServer(addr string, sysControl *system.SysController, statsControl *syst
 	// get current RabbitMQ statistic db node location
 	ser.m.Get("/api/stats", statsInfo)
 	// reset|crash|terminate current RabbitMQ statistic db node
-	ser.m.Put("/api/s
+	ser.m.Put("/api/stats/actions", statsAction)
+	return ser
+}
+
+// Start starts the server.
