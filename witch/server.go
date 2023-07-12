@@ -46,3 +46,5 @@ func NewServer(addr string, sysControl *system.SysController, statsControl *syst
 }
 
 // Start starts the server.
+func (ser *Server) Start() error {
+	log.Printf("[INFO] S
