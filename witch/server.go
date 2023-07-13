@@ -47,4 +47,5 @@ func NewServer(addr string, sysControl *system.SysController, statsControl *syst
 
 // Start starts the server.
 func (ser *Server) Start() error {
-	log.Printf("[INFO] S
+	log.Printf("[INFO] System webapp start at %s", ser.addr)
+	return manners.ListenAndServe(ser.addr,
