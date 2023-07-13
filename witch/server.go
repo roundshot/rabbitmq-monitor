@@ -52,4 +52,8 @@ func (ser *Server) Start() error {
 }
 
 // Stop stops the server.
-func (s
+func (ser *Server) Stop() {
+	manners.Close()
+}
+
+func authInclusive(urlPre
