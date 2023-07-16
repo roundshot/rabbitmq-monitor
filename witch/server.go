@@ -56,4 +56,5 @@ func (ser *Server) Stop() {
 	manners.Close()
 }
 
-func authInclusive(urlPrefix string, authFunc func(http.ResponseWriter, *http.Request, martini.Con
+func authInclusive(urlPrefix string, authFunc func(http.ResponseWriter, *http.Request, martini.Context)) martini.Handler {
+	return func(resp http.ResponseWriter, r
