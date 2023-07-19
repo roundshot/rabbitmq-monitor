@@ -62,4 +62,9 @@ func authInclusive(urlPrefix string, authFunc func(http.ResponseWriter, *http.Re
 			if auth := req.URL.Query().Get("auth"); auth != "" && req.Header.Get("Authorization") == "" {
 				req.Header.Set("Authorization", "Basic "+auth)
 			}
-			auth
+			authFunc(resp, req, ctx)
+		} else {
+			ctx.Next()
+		}
+	}
+}
