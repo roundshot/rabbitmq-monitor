@@ -59,4 +59,4 @@ func (ser *Server) Stop() {
 func authInclusive(urlPrefix string, authFunc func(http.ResponseWriter, *http.Request, martini.Context)) martini.Handler {
 	return func(resp http.ResponseWriter, req *http.Request, ctx martini.Context) {
 		if strings.HasPrefix(req.URL.String(), urlPrefix) {
-			if auth := req.URL.Qu
+			if auth := req.URL.Query().Get("auth"); auth != "" && req.Header.Get("Authorization") =
