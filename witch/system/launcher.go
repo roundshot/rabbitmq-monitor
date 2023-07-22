@@ -73,3 +73,50 @@ func (s *Launcher) Start() (bool, error) {
 	child.Stdin = os.Stdin
 	child.Stdout = os.Stdout
 	child.Stderr = os.Stderr
+	if err := child.Start(); err != nil {
+		log.Printf("Failed to start: %s", err)
+		return false, err
+	}
+	s.writePid(child.Process.Pid)
+	go child.Wait()
+	return true, nil
+}
+
+// Restart restart the process
+func (s *Launcher) Restart() (bool, error) {
+	s.Stop()
+	return s.Start()
+}
+
+// Stop stops the process.
+func (s *Launcher) Stop() bool {
+	pid, ok := s.IsAlive()
+	if !ok {
+		log.Printf("The process not alive")
+		return true
+	}
+	syscall.Kill(pid, syscall.SIGTERM)
+	stopped := make(chan bool)
+	go func() {
+		for s.pidAlive(pid) {
+			time.Sleep(time.Second)
+		}
+		close(stopped)
+	}()
+	select {
+	case <-stopped:
+		log.Printf("[INFO] Stop the process success.")
+	case <-time.After(time.Duration(stopWaitSecs) * time.Second):
+		log.Printf("[INFO] Stop the process timeout, force to kill.")
+		syscall.Kill(pid, syscall.SIGKILL)
+	}
+	return true
+}
+
+// WriteFile tries to create parent directory before WriteFile.
+func WriteFile(filename string, data []byte, perm os.FileMode) error {
+	if err := os.MkdirAll(path.Dir(filename), 0755); err != nil {
+		return err
+	}
+	return ioutil.WriteFile(filename, data, perm)
+}
