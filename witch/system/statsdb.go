@@ -14,4 +14,8 @@ func NewStatsDBCtl() *StatsDBCtl {
 
 // Reset reset the RabbitMQ statsdb
 func (s *StatsDBCtl) Reset() (bool, string, error) {
-	output, err := ExecCommand(s.name, []string{"eval", "application:stop(rabbitmq_management), application:start(rabbitmq_manage
+	output, err := ExecCommand(s.name, []string{"eval", "application:stop(rabbitmq_management), application:start(rabbitmq_management)."})
+	return err == nil, output, err
+}
+
+// Terminate termin
