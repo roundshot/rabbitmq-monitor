@@ -20,4 +20,5 @@ func (s *StatsDBCtl) Reset() (bool, string, error) {
 
 // Terminate terminate the RabbitMQ statsdb
 func (s *StatsDBCtl) Terminate() (bool, string, error) {
-	output, err := ExecCommand(s.name, []string{"eval", "exit(erl
+	output, err := ExecCommand(s.name, []string{"eval", "exit(erlang:whereis(rabbit_mgmt_db), please_terminate)."})
+	return err == nil, output,
