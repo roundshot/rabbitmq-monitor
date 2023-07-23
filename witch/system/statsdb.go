@@ -5,4 +5,6 @@ type StatsDBCtl struct {
 	name string
 }
 
-// NewStatsDBCtl creates a ne
+// NewStatsDBCtl creates a new StatsDBCtl instance
+func NewStatsDBCtl() *StatsDBCtl {
+	retur
