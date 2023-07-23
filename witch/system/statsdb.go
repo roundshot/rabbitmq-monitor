@@ -18,4 +18,5 @@ func (s *StatsDBCtl) Reset() (bool, string, error) {
 	return err == nil, output, err
 }
 
-// Terminate termin
+// Terminate terminate the RabbitMQ statsdb
+func (s *StatsDBCtl) Terminate() (bool, st
