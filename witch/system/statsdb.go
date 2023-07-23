@@ -7,4 +7,9 @@ type StatsDBCtl struct {
 
 // NewStatsDBCtl creates a new StatsDBCtl instance
 func NewStatsDBCtl() *StatsDBCtl {
-	retur
+	return &StatsDBCtl{
+		name: "/sbin/rabbitmqctl",
+	}
+}
+
+// Reset rese
