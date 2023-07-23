@@ -12,4 +12,5 @@ func NewStatsDBCtl() *StatsDBCtl {
 	}
 }
 
-// Reset rese
+// Reset reset the RabbitMQ statsdb
+func (s *StatsDBCtl) Reset() (bool, strin
