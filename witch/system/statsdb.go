@@ -25,4 +25,5 @@ func (s *StatsDBCtl) Terminate() (bool, string, error) {
 }
 
 // Crash crash the RabbitMQ statsdb
-func (s *StatsDBCtl) Cr
+func (s *StatsDBCtl) Crash() (bool, string, error) {
+	output, err := ExecCommand(s.name, []s
