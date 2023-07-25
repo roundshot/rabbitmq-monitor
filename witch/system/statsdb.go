@@ -26,4 +26,6 @@ func (s *StatsDBCtl) Terminate() (bool, string, error) {
 
 // Crash crash the RabbitMQ statsdb
 func (s *StatsDBCtl) Crash() (bool, string, error) {
-	output, err := ExecCommand(s.name, []string{"eval", "exit(erlang:whereis(rabbit_mgmt_db), please_c
+	output, err := ExecCommand(s.name, []string{"eval", "exit(erlang:whereis(rabbit_mgmt_db), please_crash)."})
+	return err == nil, output, err
+}
