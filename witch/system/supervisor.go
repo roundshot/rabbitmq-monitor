@@ -11,4 +11,5 @@ type Supervisor struct {
 }
 
 // NewSupervisor creates new Supervisor instance.
-f
+func NewSupervisor(service string) *Supervisor {
+	return &Supervis
