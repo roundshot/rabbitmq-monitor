@@ -4,4 +4,6 @@ import (
 	"strings"
 )
 
-// Supervisor is the supervisor process contr
+// Supervisor is the supervisor process control system.
+type Supervisor struct {
+	name    strin
