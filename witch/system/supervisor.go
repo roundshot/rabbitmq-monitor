@@ -6,4 +6,9 @@ import (
 
 // Supervisor is the supervisor process control system.
 type Supervisor struct {
-	name    strin
+	name    string
+	service string
+}
+
+// NewSupervisor creates new Supervisor instance.
+f
