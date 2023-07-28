@@ -20,4 +20,8 @@ func NewSupervisor(service string) *Supervisor {
 
 // IsAlive gets results from `supervisorctl status [service]`
 func (s *Supervisor) IsAlive() (int, bool) {
-	r, err := ExecCommand(s.name, []string{"status", s
+	r, err := ExecCommand(s.name, []string{"status", s.service})
+	if err != nil {
+		return -1, false
+	}
+	ret
