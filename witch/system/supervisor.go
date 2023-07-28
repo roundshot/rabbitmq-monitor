@@ -29,4 +29,8 @@ func (s *Supervisor) IsAlive() (int, bool) {
 
 // Start executes `supervisorctl start [service]`
 func (s *Supervisor) Start() (bool, error) {
-	_, err := ExecCommand(s.name, []string{"star
+	_, err := ExecCommand(s.name, []string{"start", s.service})
+	return err == nil, err
+}
+
+// Restart executes `supervisorctl resta
