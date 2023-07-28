@@ -18,4 +18,5 @@ func NewSupervisor(service string) *Supervisor {
 	}
 }
 
-// IsAlive gets results from `supervisorctl status [
+// IsAlive gets results from `supervisorctl status [service]`
+func (s *Supervisor) IsAlive() (i
