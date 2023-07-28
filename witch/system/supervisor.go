@@ -27,4 +27,5 @@ func (s *Supervisor) IsAlive() (int, bool) {
 	return -1, strings.Contains(r, "RUNNING")
 }
 
-// Start executes `supervisorctl
+// Start executes `supervisorctl start [service]`
+func (s *Supervisor) Start() (bool
