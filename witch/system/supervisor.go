@@ -33,4 +33,6 @@ func (s *Supervisor) Start() (bool, error) {
 	return err == nil, err
 }
 
-// Restart executes `supervisorctl resta
+// Restart executes `supervisorctl restart [service]`
+func (s *Supervisor) Restart() (bool, error) {
+	_, err := ExecCommand(s.name
