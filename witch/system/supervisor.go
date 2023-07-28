@@ -12,4 +12,6 @@ type Supervisor struct {
 
 // NewSupervisor creates new Supervisor instance.
 func NewSupervisor(service string) *Supervisor {
-	return &Supervis
+	return &Supervisor{
+		name:    "/usr/bin/supervisorctl",
+		service: service,
