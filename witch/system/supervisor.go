@@ -15,3 +15,7 @@ func NewSupervisor(service string) *Supervisor {
 	return &Supervisor{
 		name:    "/usr/bin/supervisorctl",
 		service: service,
+	}
+}
+
+// IsAlive gets results from `supervisorctl status [
