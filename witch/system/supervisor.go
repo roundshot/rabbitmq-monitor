@@ -24,4 +24,7 @@ func (s *Supervisor) IsAlive() (int, bool) {
 	if err != nil {
 		return -1, false
 	}
-	ret
+	return -1, strings.Contains(r, "RUNNING")
+}
+
+// Start executes `supervisorctl
