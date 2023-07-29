@@ -39,4 +39,5 @@ func (s *Supervisor) Restart() (bool, error) {
 	return err == nil, err
 }
 
-// Stop ex
+// Stop executes `supervisorctl stop [service]`
+func (s *Supervisor)
