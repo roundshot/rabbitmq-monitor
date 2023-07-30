@@ -41,4 +41,6 @@ func (s *Supervisor) Restart() (bool, error) {
 
 // Stop executes `supervisorctl stop [service]`
 func (s *Supervisor) Stop() bool {
-	_, err := ExecCommand(s.name, []string{"stop",
+	_, err := ExecCommand(s.name, []string{"stop", s.service})
+	return err == nil
+}
