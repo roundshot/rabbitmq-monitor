@@ -49,3 +49,68 @@ type ActionStatus struct {
 type SysController struct {
 	System
 }
+
+// StatsController controls the RabbitMQ StatsDB
+type StatsController struct {
+	Stats
+}
+
+// Handle handle action
+func (c *StatsController) Handle(action *Action) *ActionStatus {
+	var (
+		st     = &ActionStatus{}
+		err    error
+		output string
+	)
+
+	switch action.Name {
+	case "status":
+		fallthrough
+	case "reset":
+		if st.Status, output, err = c.Reset(); err != nil {
+			st.Text = err.Error()
+		} else {
+			st.Text = output
+		}
+	case "terminate":
+		if st.Status, output, err = c.Terminate(); err != nil {
+			st.Text = err.Error()
+		} else {
+			st.Text = output
+		}
+	case "crash":
+		if st.Status, output, err = c.Crash(); err != nil {
+			st.Text = err.Error()
+		} else {
+			st.Text = output
+		}
+
+	default:
+		st.Status, st.Text = false, fmt.Sprintf("Invalid action: %s", action.Name)
+
+	}
+	log.Println("[INFO]: StatsDB Action finished")
+	return st
+}
+
+// Handle plays action.
+func (c *SysController) Handle(action *Action) *ActionStatus {
+	var (
+		st  = &ActionStatus{}
+		err error
+	)
+	switch action.Name {
+	case "status":
+		fallthrough
+	case "is_alive":
+		_, st.Status = c.IsAlive()
+	case "start":
+		if st.Status, err = c.Start(); err != nil {
+			st.Text = err.Error()
+		}
+	case "stop":
+		st.Status = c.Stop()
+	case "restart":
+		if st.Status, err = c.Restart(); err != nil {
+			st.Text = err.Error()
+		}
