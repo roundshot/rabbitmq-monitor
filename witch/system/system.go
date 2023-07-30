@@ -114,3 +114,24 @@ func (c *SysController) Handle(action *Action) *ActionStatus {
 		if st.Status, err = c.Restart(); err != nil {
 			st.Text = err.Error()
 		}
+	default:
+		st.Status, st.Text = false, fmt.Sprintf("Invalid action: %s", action.Name)
+	}
+	log.Printf("[INFO] System Action finished")
+	return st
+}
+
+// ExecCommand command execution
+func ExecCommand(name string, args []string) (string, error) {
+	var buf bytes.Buffer
+	log.Printf("[INFO] Exec %s %v", name, args)
+	child := exec.Command(name, args...)
+	child.Stdout = &buf
+	child.Stderr = &buf
+	if err := child.Start(); err != nil {
+		log.Printf("[ERROR] Failed to start: %s", err)
+		return buf.String(), err
+	}
+	child.Wait()
+	return buf.String(), nil
+}
