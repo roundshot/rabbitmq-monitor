@@ -5,4 +5,9 @@ import (
 )
 
 // Systemd is the systemd process control system.
-type Sy
+type Systemd struct {
+	name    string
+	service string
+}
+
+// NewSystemd creates new Sy
