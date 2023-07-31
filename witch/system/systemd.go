@@ -10,4 +10,6 @@ type Systemd struct {
 	service string
 }
 
-// NewSystemd creates new Sy
+// NewSystemd creates new Systemd instance.
+func NewSystemd(service string) *Systemd {
+	retur
