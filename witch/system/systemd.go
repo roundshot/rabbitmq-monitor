@@ -12,4 +12,6 @@ type Systemd struct {
 
 // NewSystemd creates new Systemd instance.
 func NewSystemd(service string) *Systemd {
-	retur
+	return &Systemd{
+		name:    "/bin/systemctl",
+		service:
