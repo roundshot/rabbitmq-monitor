@@ -14,4 +14,8 @@ type Systemd struct {
 func NewSystemd(service string) *Systemd {
 	return &Systemd{
 		name:    "/bin/systemctl",
-		service:
+		service: service,
+	}
+}
+
+// IsAlive gets results from `systemctl is-active 
