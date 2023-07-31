@@ -1,4 +1,8 @@
 package system
 
 import (
-	"stri
+	"strings"
+)
+
+// Systemd is the systemd process control system.
+type Sy
