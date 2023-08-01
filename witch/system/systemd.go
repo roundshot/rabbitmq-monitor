@@ -27,4 +27,6 @@ func (s *Systemd) IsAlive() (int, bool) {
 	return -1, strings.HasPrefix(r, "active")
 }
 
-// Start executes `systemctl sta
+// Start executes `systemctl start [service]`
+func (s *Systemd) Start() (bool, error) {
+	_, err
