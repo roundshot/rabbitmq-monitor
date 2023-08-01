@@ -20,4 +20,4 @@ func NewSystemd(service string) *Systemd {
 
 // IsAlive gets results from `systemctl is-active [service]`
 func (s *Systemd) IsAlive() (int, bool) {
-	r, err :=
+	r, err := ExecCommand(s.name, []string{"is-active", s.service})
