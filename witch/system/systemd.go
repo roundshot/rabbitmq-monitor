@@ -18,4 +18,6 @@ func NewSystemd(service string) *Systemd {
 	}
 }
 
-// IsAlive gets results from `systemctl is-active 
+// IsAlive gets results from `systemctl is-active [service]`
+func (s *Systemd) IsAlive() (int, bool) {
+	r, err :=
