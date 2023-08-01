@@ -24,4 +24,7 @@ func (s *Systemd) IsAlive() (int, bool) {
 	if err != nil {
 		return -1, false
 	}
-	return -1, 
+	return -1, strings.HasPrefix(r, "active")
+}
+
+// Start executes `systemctl sta
