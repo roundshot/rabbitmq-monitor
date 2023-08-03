@@ -33,4 +33,6 @@ func (s *Systemd) Start() (bool, error) {
 	return err == nil, err
 }
 
-// Restart executes `systemctl restart [serv
+// Restart executes `systemctl restart [service]`
+func (s *Systemd) Restart() (bool, error) {
+	_, err :
