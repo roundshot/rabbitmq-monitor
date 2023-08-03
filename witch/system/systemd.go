@@ -30,4 +30,7 @@ func (s *Systemd) IsAlive() (int, bool) {
 // Start executes `systemctl start [service]`
 func (s *Systemd) Start() (bool, error) {
 	_, err := ExecCommand(s.name, []string{"start", s.service})
-	return err == nil
+	return err == nil, err
+}
+
+// Restart executes `systemctl restart [serv
