@@ -41,4 +41,6 @@ func (s *Systemd) Restart() (bool, error) {
 
 // Stop executes `systemctl stop [service]`
 func (s *Systemd) Stop() bool {
-	_, err := ExecCommand(s.name
+	_, err := ExecCommand(s.name, []string{"stop", s.service})
+	return err == nil
+}
