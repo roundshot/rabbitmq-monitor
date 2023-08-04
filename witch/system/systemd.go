@@ -35,4 +35,5 @@ func (s *Systemd) Start() (bool, error) {
 
 // Restart executes `systemctl restart [service]`
 func (s *Systemd) Restart() (bool, error) {
-	_, err :
+	_, err := ExecCommand(s.name, []string{"restart", s.service})
+	re
