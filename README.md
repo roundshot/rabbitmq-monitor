@@ -1,1 +1,1 @@
-# rabbitmq-monitor\n\n[![Go 
+# rabbitmq-monitor\n\n[![Go Report Card](https://goreportcard.com/badge/github.com/roundshot
