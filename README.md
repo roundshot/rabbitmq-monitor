@@ -1,1 +1,1 @@
-# rabbitmq-monitor\n\n[![Go Report Card](https://goreportcard.com/badge/github.com/roundshot
+# rabbitmq-monitor\n\n[![Go Report Card](https://goreportcard.com/badge/github.com/roundshot/rabbitmq-monitor)](https://goreportcard.com/report/github.com/r
