@@ -1,1 +1,1 @@
-# rabbitmq-monitor\n\n[![Go Report Card](https://goreportcard.com/badge/github.com/roundshot/rabbitmq-monitor)](https://goreportcard.com/report/github.com/roundshot/rabbitmq-monitor)\n![GoCI](http://goci.ele.me/na/goci/
+# rabbitmq-monitor\n\n[![Go Report Card](https://goreportcard.com/badge/github.com/roundshot/rabbitmq-monitor)](https://goreportcard.com/report/github.com/roundshot/rabbitmq-monitor)\n![GoCI](http://goci.ele.me/na/goci/eleme/goci/badge?type=job)\n[![Build Status](https://travis-ci.o
